@@ -188,7 +188,9 @@ font-size: 2rem;
 	--card-top-offset: 1em;
 	--outline-width: 0px;
 }
-
+.gallery {
+    text-align: left;
+}
 #cards {
 	/* Make place at bottom, as items will slide to that position*/
 	padding-bottom: calc(var(--numcards) * var(--card-top-offset));
@@ -200,6 +202,10 @@ font-size: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(var(--numcards), var(--card-height));
     gap: var(--card-margin);
+
+    justify-items: center;
+    padding-left: 0px;
+
 }
 
 #card_1, #card_6, #card_11, #card_16 {--index: 1;}
@@ -212,6 +218,9 @@ font-size: 2rem;
 	position: sticky;
 	top: 0;
 	padding-top: calc(var(--index) * var(--card-top-offset));
+
+        display: flex; /* добавлено */
+    justify-content: center; /* добавлено */
 }
 
 .card__content {
@@ -228,6 +237,8 @@ font-size: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     align-items: stretch;
+
+    min-width: 90vw;
 }
 
 /*футер*/
@@ -329,11 +340,12 @@ footer p {
 
 .sources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-content: center;
-    align-items: stretch; /* Растягиваем карточки по высоте */
-    margin-bottom: 30px; /* Отступ от zdanie */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    row-gap: 7rem;
+    column-gap: 2rem;
+    margin-bottom: 5rem; /* пространство перед изображением */
+    z-index: 1;
+    position: relative;
 }
 
 .source-card {
@@ -343,7 +355,7 @@ footer p {
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
-    transform: translateY(30px);
+    transform: translateY(10px);
     display: flex; /* Добавляем flex */
     flex-direction: column; /* Вертикальное расположение элементов */
     height: 100%; /* Занимаем всю доступную высоту */
@@ -351,7 +363,6 @@ footer p {
 .source-card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    background-color: #A0D7C7;
 }
 
 .source-card-content {
@@ -367,7 +378,6 @@ footer p {
     object-fit: contain; /* Сохраняем пропорции */
 
 }
-
 
 .source-card h3 {
     color: #FEC340;
@@ -400,11 +410,11 @@ footer p {
 .zdanie{
     width: 100%;
     max-width: 1500px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1; /* Чтобы не перекрывало карточки */
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    z-index: 0;
 }
 /* Кнопка "Наверх" */
 
