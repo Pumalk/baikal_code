@@ -1,0 +1,421 @@
+/*загрузка шрифтов*/
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/media/fonts/PTS_normal.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/media/fonts/PTS_bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/media/fonts/PTS_italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('/media/fonts/PTS_bold_italic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Базовый сброс для предотвращения неожиданных отступов */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(media/fon/А4_горизонтальный-06.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'PT Sans', sans-serif;
+}
+
+/*СЕКЦИИ*/
+section{
+    min-width: 100%;
+    min-height: 100%;
+    min-height: 100vh; /* Чтобы секция была минимум на весь экран */
+    border: 1px solid red;
+}
+/*секция 1*/
+.hero {
+    height: 100vh;
+    background-image: url(media/photo/back.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальное центрирование */
+    align-items: center; /* горизонтальное центрирование */
+    text-align: center;
+    position: relative;
+}
+
+.hero-text{
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to left, #C9243F, #FEC340);
+    font-weight: bold;
+}
+
+.hero h1{
+font-size: 5rem;
+}
+
+.hero h2{
+font-size: 2rem;
+}
+
+
+.hero-text a {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    background-color: #C9243F;
+    transition: background-color 0.5s ease;
+}
+
+.hero-text a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Логотип в hero */
+.logo-hero {
+    position: absolute;
+    top: 5px;
+    width: 200px;
+    z-index: 2;
+}
+
+
+/*секция 2(агроклассы)*/
+#sectionPin.agroclasses {
+    height: 400vh; /* (5 блоков - 1) * 100vh */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: visible;
+    view-timeline-name: --section-pin-tl;
+    view-timeline-axis: block;
+}
+
+.pin-wrap-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%; /* Меняем 100vw на 100% */
+    overflow: hidden;
+}
+
+.pin-wrap {
+    height: 100vh;
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: linear move forwards;
+    animation-timeline: --section-pin-tl;
+    animation-range: contain 0% contain 100%;
+}
+
+.agro-block {
+    width: 100vw; /* Важно оставить vw для анимации */
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.agro-text {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.agro-photo {
+    background-color: #f0f0f0;
+}
+
+.agro-photo img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes move {
+    to {
+        transform: translateX(calc(-100% + 100vw));
+    }
+}
+
+/*секция 3(галерея растений)*/
+:root {
+	--card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--outline-width: 0px;
+}
+
+#cards {
+	/* Make place at bottom, as items will slide to that position*/
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+	/* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+	margin-bottom: var(--card-margin);
+
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--numcards), var(--card-height));
+    gap: var(--card-margin);
+}
+
+#card_1, #card_6, #card_11, #card_16 {--index: 1;}
+#card_2, #card_7, #card_12, #card_17 {--index: 2;}
+#card_3, #card_8, #card_13, #card_18 {--index: 3;}
+#card_4, #card_9, #card_14, #card_19 {--index: 4;}
+#card_5, #card_10, #card_15, #card_20 {--index: 5;}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+.card__content {
+	transform-origin: 50% 0%;
+	will-change: transform;
+
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255);
+    color: rgb(10, 5, 7);
+    border-radius: 1em;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "text img";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: stretch;
+}
+
+/*футер*/
+footer {
+    max-width: 100%;
+    background: linear-gradient(135deg, #A0D7C7 0%, #fec340 100%);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0;
+
+    /* Выравнивание по умолчанию */
+    align-items: center;
+    justify-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-logo {
+    width: 500px;
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+}
+
+.call { 
+    grid-area: 1 / 3 / 2 / 4; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Картинка будет по центру */
+    text-align: left;
+    align-self: start;
+}
+
+.call a {
+    text-decoration: none;
+    color: #C9243F;
+}
+
+.call img {
+    margin-bottom: 10px; /* Опционально: отступ между картинкой и текстом */
+}
+
+.call .call-text {
+    align-self: flex-start; /* Выравниваем текст слева */
+}
+
+.social-link img,
+.call img {
+    width: 60px;
+}
+
+.address { 
+    grid-area: 2 / 1 / 3 / 2; 
+    text-align: left;
+    justify-self: start; /* прижимает влево внутри своей ячейки */
+}
+
+.press { 
+    grid-area: 2 / 3 / 3 / 4; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* по горизонтали */
+    align-self: center;   /* по вертикали */
+    text-align: center;
+}
+
+.press-2 {
+    align-self: flex-start; /* можно удалить или заменить, если центрирование нужно */
+}
+
+.social-link {
+    grid-area: 1 / 5 / 2 / 6; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright { 
+    grid-area: 2 / 5 / 3 / 6; 
+}
+
+.footer-logo,
+.copyright,
+.social-link {
+    text-align: center;
+}
+
+/* секция с ссылками */
+.sources{
+    text-align: center;
+    align-items: center;
+    position: relative; /* Для позиционирования zdanie */
+}
+
+.sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch; /* Растягиваем карточки по высоте */
+    margin-bottom: 30px; /* Отступ от zdanie */
+}
+
+.source-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    transform: translateY(30px);
+    display: flex; /* Добавляем flex */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    height: 100%; /* Занимаем всю доступную высоту */
+}
+.source-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    background-color: #A0D7C7;
+}
+
+.source-card-content {
+    flex: 1; /* Растягиваем контент на всю доступную высоту */
+    display: flex;
+    flex-direction: column;
+}
+
+.source-icon img {
+    width: 200px;
+    margin-bottom: 20px;
+    max-height: 100px; /* Ограничиваем высоту иконок */
+    object-fit: contain; /* Сохраняем пропорции */
+
+}
+
+
+.source-card h3 {
+    color: #FEC340;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.source-card:hover h3 {
+    color: #7F3F98;
+}
+
+.source-card p {
+    flex-grow: 1; /* Текст занимает доступное пространство */
+    margin-bottom: 15px;
+}
+
+.source-card a {
+    color: #C9243F;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.source-card a:hover {
+    text-decoration: underline;
+}
+
+.zdanie{
+    width: 100%;
+    max-width: 1500px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; /* Чтобы не перекрывало карточки */
+}
+/* Кнопка "Наверх" */
+
+/*мелкие исправления*/
+h2{
+    text-align: center;
+}
+h1, h2, h3, h4{
+    color: #FFC240; 
+    background-image: linear-gradient(90deg, #FFC240 , #C92440 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;  
+}
