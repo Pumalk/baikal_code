@@ -219,8 +219,8 @@ font-size: 2rem;
 	top: 0;
 	padding-top: calc(var(--index) * var(--card-top-offset));
 
-        display: flex; /* добавлено */
-    justify-content: center; /* добавлено */
+    display: flex;
+    justify-content: center;
 }
 
 .card__content {
@@ -238,8 +238,35 @@ font-size: 2rem;
     grid-template-rows: auto;
     align-items: stretch;
 
-    min-width: 90vw;
+    max-width: 90vw;
+    padding: 30px;
 }
+
+.card__content figure img{
+    width: 800px;
+    float: right;
+    border-radius: 1em;
+}
+
+.card_text{
+    text-align: justify;
+    width: 50rem;
+    margin: 20px;
+}
+
+.card_text h3{
+text-align: left;
+font-size: 3rem;
+}
+
+.card_text h4{
+    font-size: 1.5rem;
+}
+
+.card_text a img{
+    width: 7rem;
+}
+
 
 /*футер*/
 footer {
@@ -428,4 +455,9 @@ h1, h2, h3, h4{
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
 }
