@@ -168,6 +168,10 @@ section{
     transition-delay: 0.2s
 }
 
+.agro-text p{
+    text-align: justify;
+}
+
 .agro-photo:nth-child(2) { transition-delay: 0.3s }
 .agro-photo:nth-child(3) { transition-delay: 0.5s }
 .agro-photo:nth-child(4) { transition-delay: 0.8s }
