@@ -106,7 +106,7 @@ section{
 /* Логотип в hero */
 .logo-hero {
     position: absolute;
-    top: 5px;
+    top: 10px;
     width: 200px;
     z-index: 2;
 }
@@ -121,6 +121,7 @@ section{
     overflow: visible;
     view-timeline-name: --section-pin-tl;
     view-timeline-axis: block;
+    z-index: 2;
 }
 
 .pin-wrap-sticky {
@@ -164,8 +165,12 @@ section{
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+    transition-delay: 0.2s
 }
 
+.agro-photo:nth-child(2) { transition-delay: 0.3s }
+.agro-photo:nth-child(3) { transition-delay: 0.5s }
+.agro-photo:nth-child(4) { transition-delay: 0.8s }
 
 .agro-photo img {
     max-width: 90%;
@@ -189,7 +194,9 @@ section{
 	--outline-width: 0px;
 }
 .gallery {
+    position: relative;
     text-align: left;
+    z-index: 1; /* Добавить это */
 }
 #cards {
 	/* Make place at bottom, as items will slide to that position*/
@@ -205,7 +212,7 @@ section{
 
     justify-items: center;
     padding-left: 0px;
-
+    margin-bottom: 10rem;
 }
 
 #card_1, #card_6, #card_11, #card_16 {--index: 1;}
@@ -221,7 +228,18 @@ section{
 
     display: flex;
     justify-content: center;
+
+    transition: transform 0.8s ease;
 }
+
+.card:nth-child(odd) {
+    transform: translateY(100px);
+}
+
+.card:nth-child(even) {
+    transform: translateY(150px);
+}
+
 
 .card__content {
     transform-origin: 50% 0%;
@@ -300,7 +318,7 @@ section{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 11;
     width: 100%;
     height: 100%;
 }
@@ -325,7 +343,7 @@ html.modal-open, body.modal-open {
 
 .modal-container {
     position: relative;
-    z-index: 1001;
+    z-index: 12;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
@@ -349,7 +367,7 @@ html.modal-open, body.modal-open {
     color: #777;
     cursor: pointer;
     transition: color 0.3s;
-    z-index: 10;
+    z-index: 11;
 }
 
 .modal-close:hover {
@@ -527,7 +545,7 @@ html.modal-open, body.modal-open {
 }
 
 .media-tab.active {
-  background: #7c4dff;
+  background: #C9243F;
   color: white;
 }
 
@@ -686,8 +704,8 @@ footer p {
     padding: 30px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-    transform: translateY(10px);
+    transition: all 0.2s ease;
+    transform: translateY(50px);
     display: flex; /* Добавляем flex */
     flex-direction: column; /* Вертикальное расположение элементов */
     height: 100%; /* Занимаем всю доступную высоту */
@@ -753,29 +771,23 @@ color: #A0D7C7;
 
 /*мелкие исправления*/
 h1{
-    color: #FFC240; 
-    background-image: linear-gradient(90deg, #FFC240 , #C92440 100%); 
+    color: #C92440; 
+    background-image: linear-gradient(90deg,#C92440 , #FFC240 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
     font-weight: bold;
-}
-
-h2{
-    color: #FFC240; 
-    background-image: linear-gradient(90deg, #FFC240 0%, #7F3F99 100%); 
-    background-clip: text; 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-}
-
-h1{
-font-size: 9rem;
+    font-size: 9rem;
 }
 
 h2{
     font-size: 4rem;
     text-align: center;
+    color: #FFC240; 
+    background-image: linear-gradient(90deg, #FFC240 0%, #A0D7C7 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
 }
 
 h3{
@@ -816,6 +828,7 @@ a{
     background: linear-gradient(to bottom, #7F3F98, #A0D7C7, #FEC340);
     border-radius: 3px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
 }
 
 .map-points {
@@ -879,12 +892,16 @@ a{
     text-align: center;
     border: 2px solid transparent;
     font-weight: bold;
+
+    transform: translateX(100px);
+    transition: transform 0.7s ease;
 }
 
 /* Эффекты при наведении */
 .map-point:hover .map-icon {
     transform: scale(1.15);
     box-shadow: 0 0 0 8px rgba(201, 36, 63, 0.2);
+
 }
 
 .map-point:hover .point-label {
@@ -892,6 +909,7 @@ a{
     color: #FFFFFF;
     transform: translateX(15px);
     border-color: rgba(255, 255, 255, 0.3);
+        transition: 0.2s linear;
 }
 
 /* Чередование точек слева/справа */
@@ -899,52 +917,137 @@ a{
     flex-direction: row-reverse;
 }
 
+.map-point:nth-child(odd) .point-label {
+    transform: translateX(-100px);
+}
+
 .map-point:nth-child(odd):hover .point-label {
     transform: translateX(-15px);
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .map-line {
-        left: 45px;
-    }
-    
-    .map-point {
-        flex-direction: row !important;
-        margin-left: 45px;
-        gap: 20px;
-    }
-    
-    .map-icon {
-        width: 50px;
-        height: 50px;
-        margin: 0 15px 0 0;
-    }
-    
-    .point-label {
-        font-size: 1.2rem;
-        padding: 12px 20px;
-    }
-    
-    .map-point:hover .point-label,
-    .map-point:nth-child(odd):hover .point-label {
-        transform: translateX(10px);
-    }
+
+/* Графика и цифры */
+.graph {
+    background-image: url(media/fon/А4_горизонтальный-06.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
 }
 
-@media (max-width: 480px) {
-    .map-icon {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .map-icon svg {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .point-label {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
+.graph h2, .graph h3 {
+    text-align: center;
+    color: #FEC340;
+}
+
+.graph h3 {
+    background-image: linear-gradient(90deg,#7F3F98, #C92440 50% , #FEC340 100%);
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: stretch; /* Растягиваем до одинаковой высоты */
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    min-height: 300px; /* Фиксированная минимальная высота карточки */
+
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+
+/* Четные элементы - картинка слева, текст справа */
+.stat-item:nth-child(even) {
+    flex-direction: row;
+}
+
+/* Нечетные элементы - картинка справа, текст слева */
+.stat-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.stat-icon {
+    flex: 0 0 45%; /* Фиксированная ширина для изображения */
+    display: flex;
+    align-items: center; /* Центрируем изображение по вертикали */
+    justify-content: center;
+}
+
+.stat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.graph img {
+    max-height: 250px; /* Фиксированная высота изображения */
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7F3F98;
+    margin-bottom: 15px;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.4;
+}
+
+.stat-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.stat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #7F3F98;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+/* Задержка для тегов */
+.tag:nth-child(1) { transition-delay: 0.1s }
+.tag:nth-child(2) { transition-delay: 0.2s }
+.tag:nth-child(3) { transition-delay: 0.3s }
+.tag:nth-child(4) { transition-delay: 0.4s }
+
+.graph-footer {
+    max-width: 800px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+    text-align: center;
+    color: white;
+    font-style: italic;
 }

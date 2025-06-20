@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="accelerometer=(self), gyroscope=(self)">
     <title>Природный код Байкала</title>
     <link rel="icon" href="media/favicons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="media/favicons/favicon-16x16.png" sizes="16x16">
@@ -14,6 +13,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="progress"></div>
 <section id="hero" class="hero">
     <div class="logo-hero">
         <a href="https://bgsha.ru/">
@@ -131,16 +131,56 @@
 
 
     <section class="graph" id="graph">
-        <h2>Байкал в цифрах</h2>
-        <p>Формат: иконки + цифры + подпись
-(анимация счётчика при появлении)
-•	Примеры:
-o	🌿 220 видов растений в регионе
-o	📕 25 занесены в Красную книгу(анимация появления книги)
-o	🧪 15 видов применяются в медицине
-o	🧴 Используются в: лекарствах, БАДах, косметике
-</p>
-    </section>
+    <h2>Байкал в цифрах</h2>
+    <h3 class="graph-intro">Уникальная природа Байкальского региона в значимых показателях.</h3>
+    
+    <div class="stats">
+        <!-- Статистика 1 (картинка справа) -->
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/поле растений.png" alt="Растения"></div>
+            <div class="stat-content">
+                <div class="stat-number">220</div>
+                <div class="stat-label">видов лекарственных растений в регионе</div>
+            </div>
+        </div>
+        
+        <!-- Статистика 2 (картинка слева) -->
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/красная книга.png" alt="Красная книга"></div>
+            <div class="stat-content">
+                <div class="stat-number">25</div>
+                <div class="stat-label">занесены в Красную книгу</div>
+            </div>
+        </div>
+        
+        <!-- Статистика 3 (картинка справа) -->
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/растение в медицине.png" alt="Растение"></div>
+            <div class="stat-content">
+                <div class="stat-number">25</div>
+                <div class="stat-label">активно применяются в современной медицине</div>
+            </div>
+        </div>
+        
+        <!-- Статистика 4 (картинка слева) -->
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/растени-аромки.png" alt="Растение"></div>
+            <div class="stat-content">
+                <div class="stat-text">Используются в:</div>
+                <div class="stat-tags">
+                    <span class="tag">лекарствах</span>
+                    <span class="tag">БАДах</span>
+                    <span class="tag">косметике</span>
+                    <span class="tag">ароматерапии</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="graph-footer">
+        <p>Эти данные основаны на исследованиях Ботанического сада БГСХА и многолетних наблюдениях за флорой Байкальского региона.</p>
+    </div>
+</section>
 
 
     <section class="gallery" id="gallery">
@@ -488,7 +528,7 @@ function closeModal(modal) {
     modal.style.display = 'none';
     document.body.classList.remove('modal-open');
 }
-</script>
+    </script>
 </body>
 <!--https://github.com/Pumalk-->
 </html>
