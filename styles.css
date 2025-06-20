@@ -200,7 +200,7 @@ section{
 .gallery {
     position: relative;
     text-align: left;
-    z-index: 1; /* Добавить это */
+    z-index: 1;
 }
 #cards {
 	/* Make place at bottom, as items will slide to that position*/
@@ -347,7 +347,7 @@ html.modal-open, body.modal-open {
 
 .modal-container {
     position: relative;
-    z-index: 12;
+    z-index: 11;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);

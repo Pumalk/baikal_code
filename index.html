@@ -364,6 +364,21 @@ o	Итог в конце: баллы + расшифровка результат
     <!-- Скрипт для кнопки "Наверх" -->
     <!-- Скрипт для добавления карточек -->
     <script type="module">
+        const $progressbar = document.querySelector('#progress');
+
+$progressbar.style.transformOrigin = '0% 50%';
+$progressbar.animate(
+	{
+		transform: ['scaleX(0)', 'scaleX(1)'],
+	},
+	{
+		fill: 'forwards',
+		timeline: new ScrollTimeline({
+			source: document.documentElement,
+		}),
+	}
+);
+
 import { getCardData, getAllCardIds } from './cards-data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
