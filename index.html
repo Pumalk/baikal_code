@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="progress"></div>
+    
 <section id="hero" class="hero">
     <div class="logo-hero">
         <a href="https://bgsha.ru/">
@@ -139,7 +139,7 @@
         <div class="stat-item">
             <div class="stat-icon"><img src="media/photo/поле растений.png" alt="Растения"></div>
             <div class="stat-content">
-                <div class="stat-number">220</div>
+                <div class="stat-number count-animate" data-to="220">220</div>
                 <div class="stat-label">видов лекарственных растений в регионе</div>
             </div>
         </div>
@@ -148,7 +148,7 @@
         <div class="stat-item">
             <div class="stat-icon"><img src="media/photo/красная книга.png" alt="Красная книга"></div>
             <div class="stat-content">
-                <div class="stat-number">25</div>
+                <div class="stat-number count-animate" data-to="25">25</div>
                 <div class="stat-label">занесены в Красную книгу</div>
             </div>
         </div>
@@ -157,7 +157,7 @@
         <div class="stat-item">
             <div class="stat-icon"><img src="media/photo/растение в медицине.png" alt="Растение"></div>
             <div class="stat-content">
-                <div class="stat-number">25</div>
+                <div class="stat-number count-animate" data-to="15">15</div>
                 <div class="stat-label">активно применяются в современной медицине</div>
             </div>
         </div>
@@ -168,10 +168,10 @@
             <div class="stat-content">
                 <div class="stat-text">Используются в:</div>
                 <div class="stat-tags">
-                    <span class="tag">лекарствах</span>
-                    <span class="tag">БАДах</span>
-                    <span class="tag">косметике</span>
-                    <span class="tag">ароматерапии</span>
+                    <span class="tag stat-tag">лекарствах</span>
+                    <span class="tag stat-tag">БАДах</span>
+                    <span class="tag stat-tag">косметике</span>
+                    <span class="tag stat-tag">ароматерапии</span>
                 </div>
             </div>
         </div>
@@ -325,7 +325,6 @@ o	Итог в конце: баллы + расшифровка результат
 </section>
 
 
-
     <footer>
         <div>
             <a href="https://bgsha.ru/">
@@ -359,176 +358,7 @@ o	Итог в конце: баллы + расшифровка результат
             </div>
     </footer>
 
-    <!-- Кнопка "Наверх" -->
-
-    <!-- Скрипт для кнопки "Наверх" -->
-    <!-- Скрипт для добавления карточек -->
-    <script type="module">
-import { getCardData, getAllCardIds } from './scripts/cards-data.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-    const cardsContainer = document.getElementById('cards');
-    const cardIds = getAllCardIds();
-    
-    document.documentElement.style.setProperty('--numcards', cardIds.length);
-    
-    cardIds.forEach(cardId => {
-        const cardData = getCardData(cardId);
-        createCard(cardData, cardsContainer);
-    });
-
-    initAllModals();
-});
-
-function createCard(cardData, container) {
-    const cardElement = document.createElement('li');
-    cardElement.className = 'card';
-    cardElement.id = cardData.id;
-    cardElement.innerHTML = `
-    <div class="card__content">
-        <div class="card_text" style="grid-area: text;">
-            <h3>${cardData.title}</h3>
-            <h4>Интересный факт:</h4>
-            <p>${cardData.fact}</p>
-            <a href="#" class="btn btn--accent" data-modal="modal_${cardData.id}">
-                <img src="media/icons in body/информация1.png" alt="Подробнее">
-            </a>
-        </div>
-        <figure style="grid-area: img;">
-            <img src="${cardData.image}" alt="${cardData.title}" loading="lazy">
-        </figure>
-    </div>
-    `;
-    
-    const modalElement = document.createElement('div');
-    modalElement.className = 'flower-modal';
-    modalElement.id = `modal_${cardData.id}`;
-    modalElement.innerHTML = `
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close">&times;</button>
-            <div class="modal-header">
-                <h2>${cardData.title}</h2>
-                <div class="modal-names">
-                    <span class="buryat-name">${cardData.buryatName}</span>
-                    <span class="scientific-name">${cardData.scientificName}</span>
-                </div>
-            </div>
-            <div class="modal-content">
-                <div class="modal-media">
-                    <div class="media-tabs">
-                        <button class="media-tab active" data-tab="3d">3D Модель</button>
-                        <button class="media-tab" data-tab="photo">Фото</button>
-                    </div>
-                    ${cardData.modalContent.sketchfabEmbed}
-                    <div class="photo-tab" style="display: none;">
-                        <img src="${cardData.image}" alt="${cardData.title}">
-                    </div>
-                </div>
-                <div class="modal-info">
-                    <div class="info-section">
-                        <h3>Полное описание</h3>
-                        <p>${cardData.modalContent.fullDescription}</p>
-                    </div>
-                    <div class="info-section">
-                        <h3>Где растёт</h3>
-                        <p>${cardData.modalContent.habitat}</p>
-                    </div>
-                    <div class="info-section">
-                        <h3>Свойства и применение</h3>
-                        <ul>
-                            ${cardData.modalContent.properties.map(prop => `<li>${prop}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <div class="info-section">
-                        <h3>Факты и цифры</h3>
-                        <div class="facts-grid">
-                            <div class="fact-item">
-                                <div class="fact-value">${cardData.modalContent.facts.height}</div>
-                                <div class="fact-label">Высота растения</div>
-                            </div>
-                            <div class="fact-item">
-                                <div class="fact-value">${cardData.modalContent.facts.blooming}</div>
-                                <div class="fact-label">Период цветения</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-section status-section">
-                        <h3>Охранный статус</h3>
-                        <p class="status">${cardData.modalContent.status}</p>
-                        ${cardData.modalContent.herbariumLink ? `
-                        <div class="herbarium-link">
-                            <a href="${cardData.modalContent.herbariumLink}" target="_blank" class="btn btn--herbarium">
-                                Посмотреть в цифровом гербарии
-                            </a>
-                        </div>
-                        ` : ''}
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
-    
-    container.appendChild(cardElement);
-    document.body.appendChild(modalElement);
-}
-
-function initAllModals() {
-    document.querySelectorAll('.btn--accent').forEach(btn => {
-        const modalId = btn.dataset.modal;
-        const modal = document.getElementById(modalId);
-        
-        if (!modal) return;
-        
-        const closeBtn = modal.querySelector('.modal-close');
-        const overlay = modal.querySelector('.modal-overlay');
-        const tabs = modal.querySelectorAll('.media-tab');
-        const sketchfabEmbed = modal.querySelector('.sketchfab-embed-wrapper');
-        const photoTab = modal.querySelector('.photo-tab');
-        
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.body.classList.add('modal-open');
-            modal.style.display = 'block';
-            sketchfabEmbed.style.display = 'block';
-            photoTab.style.display = 'none';
-        });
-        
-        closeBtn.addEventListener('click', () => closeModal(modal));
-        overlay.addEventListener('click', () => closeModal(modal));
-        
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                
-                if (tab.dataset.tab === '3d') {
-                    sketchfabEmbed.style.display = 'block';
-                    photoTab.style.display = 'none';
-                } else {
-                    sketchfabEmbed.style.display = 'none';
-                    photoTab.style.display = 'block';
-                }
-            });
-        });
-    });
-    
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            document.querySelectorAll('.flower-modal').forEach(modal => {
-                if (modal.style.display === 'block') {
-                    closeModal(modal);
-                }
-            });
-        }
-    });
-}
-
-function closeModal(modal) {
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open');
-}
-    </script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 <!--https://github.com/Pumalk-->
 </html>

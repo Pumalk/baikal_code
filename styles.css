@@ -1055,3 +1055,40 @@ a{
     color: white;
     font-style: italic;
 }
+
+/* --- Анимация появления элементов --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s, transform 0.7s;
+}
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Анимация чисел --- */
+.count-animate {
+    font-weight: bold;
+    font-size: 2em;
+    color: #C9243F;
+    transition: color 0.5s;
+}
+
+/* --- Анимация тегов статистики --- */
+.stat-tags .tag {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s, transform 0.5s;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    background: #FEC340;
+    color: #222;
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 1em;
+}
+.stat-tags .tag.tag-animated {
+    opacity: 1;
+    transform: scale(1);
+}
