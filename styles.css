@@ -812,6 +812,7 @@ font-size: 1.2rem;
 
 a{
     text-decoration: none;
+    cursor: pointer;
 }
 
 /* Стили для секции навигации (карты путешествия) */
@@ -1091,4 +1092,28 @@ a{
 .stat-tags .tag.tag-animated {
     opacity: 1;
     transform: scale(1);
+}
+
+
+/* Кнопка "наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #C9243F; /* или ваш основной цвет */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 11;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.back-to-top:hover {
+    background: #FEC340; /* или ваш акцентный цвет */
+    transform: translateY(-5px);
 }
