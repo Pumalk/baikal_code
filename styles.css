@@ -1117,3 +1117,172 @@ a{
     background: #FEC340; /* или ваш акцентный цвет */
     transform: translateY(-5px);
 }
+
+.history {
+            overflow: hidden;
+            padding: 40px 20px;
+            background: #f8f9fa;
+            position: relative;
+        }
+        
+        .history-timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 0 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 35rem;
+            width: 6px;
+            transform: translateX(-50%);
+            z-index: 0;
+            background: linear-gradient(to bottom, #FEC340, #C9243F, #7F3F98);
+        }
+        
+        .timeline-start {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .timeline-end {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            z-index: 2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+        
+        .berry {
+            width: 150px;
+            height: 150px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            rotate: 45deg;
+        }
+        
+        .black-berry {
+            width: 150px;
+            height: 150px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 60px;
+            width: 100%;
+            clear: both;
+            z-index: 1;
+        }
+        
+        .last-item {
+            margin-bottom: 0;
+            padding-bottom: 40px;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: 45%;
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            top: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .leaf {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .timeline-content.left {
+            float: left;
+            text-align: right;
+        }
+        
+        .timeline-content.left .timeline-marker {
+            right: -65px;
+        }
+        
+        .timeline-content.right {
+            float: right;
+            text-align: left;
+        }
+        
+        .timeline-content.right .timeline-marker {
+            left: -65px;
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.6em;
+            border-bottom: 2px solid #27ae60;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-content p, 
+        .timeline-content ul {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            color: #34495e;
+        }
+        
+        .timeline-content ul {
+            padding-left: 25px;
+            text-align: left;
+        }
+        
+        .timeline-content li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .timeline-content li:before {
+            content: "🌿";
+            position: absolute;
+            left: -25px;
+        }
+
+        .timeline-text{
+            margin-top: 20rem;
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
