@@ -88,6 +88,31 @@ const timelineObserver = new window.IntersectionObserver((entries) => {
     });
 }, { threshold: 0.3 });
 timelineItems.forEach(item => timelineObserver.observe(item));
+
+// --- Анимация появления картинок в инфографике (выезд слева/справа) ---
+const statItems = document.querySelectorAll('#graph .stat-item');
+statItems.forEach((item, i) => {
+    const icon = item.querySelector('.stat-icon');
+    if (!icon) return;
+    // Четные — справа, нечетные — слева
+    if (i % 2 === 0) {
+        icon.style.transform = 'translateX(120px)';
+    } else {
+        icon.style.transform = 'translateX(-120px)';
+    }
+    icon.style.opacity = '0';
+});
+const statIconObserver = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.transition = 'opacity 0.8s, transform 0.8s';
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateX(0)';
+        }
+    });
+}, { threshold: 0.3 });
+document.querySelectorAll('#graph .stat-icon').forEach(icon => statIconObserver.observe(icon));
+
 });
 
 function animateNumber(el, to, duration = 1500) {

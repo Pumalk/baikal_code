@@ -76,14 +76,41 @@ section{
     position: relative;
 }
 
-.hero-text{
-    color: transparent;    
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(to left, #C9243F, #FEC340);
+.hero-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to left, #C9243F, #FEC340);
     font-weight: bold;
+
+    /*-webkit-animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;*/
 }
 
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 
 .hero-text a {
@@ -890,7 +917,7 @@ a{
     text-decoration: none;
     padding: 15px 30px;
     border-radius: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     flex-grow: 1;
@@ -964,8 +991,6 @@ a{
     display: flex;
     align-items: stretch; /* Растягиваем до одинаковой высоты */
     gap: 30px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
     padding: 25px;
     min-height: 300px; /* Фиксированная минимальная высота карточки */
 
@@ -991,6 +1016,16 @@ a{
     justify-content: center;
 }
 
+/* --- Анимация появления картинок в инфографике --- */
+.stat-icon {
+    opacity: 0;
+    transition: opacity 0.8s, transform 0.8s;
+}
+.stat-icon.graph-animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .stat-content {
     flex: 1;
     display: flex;
@@ -999,7 +1034,7 @@ a{
 }
 
 .graph img {
-    max-height: 250px; /* Фиксированная высота изображения */
+    max-height: 30rem; /* Фиксированная высота изображения */
     object-fit: contain;
     border-radius: 15px;
     display: block;
@@ -1014,7 +1049,7 @@ a{
 
 .stat-label {
     font-size: 1.2rem;
-    color: #333;
+    color: #FEC340;
     line-height: 1.4;
 }
 
@@ -1119,11 +1154,16 @@ a{
 }
 
 .history {
-            overflow: hidden;
-            padding: 40px 20px;
-            position: relative;
-        }
+    overflow: hidden;
+    padding: 40px 20px;
+    position: relative;
+}
         
+.history-podz{ 
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
         .history-timeline {
             position: relative;
             max-width: 1200px;
@@ -1176,15 +1216,19 @@ a{
             padding-bottom: 40px;
         }
         
-        .timeline-content {
-            position: relative;
-            width: 45%;
-            padding: 25px;
-            border-radius: 12px;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(254, 195, 64, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
         
         .timeline-content:hover {
             transform: translateY(-5px);
@@ -1257,14 +1301,18 @@ a{
             left: -25px;
         }
 
-        .timeline-text{
-            margin-top: 5rem;
-            padding: 20px;
-            border-radius: 1rem;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
+.timeline-text{
+    margin-top: 5rem;
+    padding: 20px;
+    border-radius: 1rem;
+    background: rgba(254, 195, 64, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
 
         .timeline-row {
     display: flex;
@@ -1307,4 +1355,22 @@ a{
 .timeline-image-block.timeline-image-animated {
     opacity: 1;
     transform: translateX(0);
+}
+
+.about-intro{
+    text-align: center;
+}
+.about-text{
+    text-align: justify;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7F3F98;
+}
+
+
+.victorina{
+    background-image: url(media/fon/cyber\ fon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
