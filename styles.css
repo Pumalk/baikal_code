@@ -1121,7 +1121,6 @@ a{
 .history {
             overflow: hidden;
             padding: 40px 20px;
-            background: #f8f9fa;
             position: relative;
         }
         
@@ -1156,32 +1155,12 @@ a{
             align-items: center;
             justify-content: center;
         }
-
-            .timeline-end {
-            position: absolute;
-            bottom: -25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 50px;
-            z-index: 2;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            }
         
         .berry {
             width: 150px;
             height: 150px;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
             rotate: 45deg;
-        }
-        
-        .black-berry {
-            width: 150px;
-            height: 150px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
         
         .timeline-item {
@@ -1279,10 +1258,53 @@ a{
         }
 
         .timeline-text{
-            margin-top: 20rem;
-            padding: 25px;
-            border-radius: 12px;
+            margin-top: 5rem;
+            padding: 20px;
+            border-radius: 1rem;
             background: white;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
         }
+
+        .timeline-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.timeline-content.left, .timeline-content.right {
+    width: 45%;
+}
+.timeline-image-block {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.timeline-image {
+    width: 20rem;
+    border-radius: 1rem;
+}
+.timeline-image-caption {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #7F3F98;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.timeline-item.left .timeline-image-block {
+    transform: translateX(120px); /* выезд справа */
+}
+.timeline-item.right .timeline-image-block {
+    transform: translateX(-120px); /* выезд слева */
+}
+.timeline-image-block.timeline-image-animated {
+    opacity: 1;
+    transform: translateX(0);
+}

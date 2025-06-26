@@ -62,6 +62,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.7 });
     statTags.forEach(tag => tagObserver.observe(tag));
 
+    // --- Анимация появления картинок в таймлайне ---
+const timelineItems = document.querySelectorAll('.timeline-item');
+timelineItems.forEach(item => {
+    const imageBlock = item.querySelector('.timeline-image-block');
+    if (!imageBlock) return;
+    // определяем направление анимации
+    if (item.querySelector('.timeline-content.left')) {
+        imageBlock.style.transform = 'translateX(120px)';
+    } else if (item.querySelector('.timeline-content.right')) {
+        imageBlock.style.transform = 'translateX(-120px)';
+    }
+    imageBlock.style.opacity = '0';
+});
+const timelineObserver = new window.IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const imageBlock = entry.target.querySelector('.timeline-image-block');
+            if (imageBlock) {
+                imageBlock.style.transition = 'opacity 0.8s, transform 0.8s';
+                imageBlock.style.opacity = '1';
+                imageBlock.style.transform = 'translateX(0)';
+            }
+        }
+    });
+}, { threshold: 0.3 });
+timelineItems.forEach(item => timelineObserver.observe(item));
 });
 
 function animateNumber(el, to, duration = 1500) {
