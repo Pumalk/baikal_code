@@ -80,11 +80,10 @@ section{
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(to left, #C9243F, #FEC340);
     font-weight: bold;
 
-    /*-webkit-animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;*/
+    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -808,11 +807,11 @@ h1{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
     font-weight: bold;
-    font-size: 9rem;
+    font-size: 7rem;
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     color: #FFC240; 
     background-image: linear-gradient(90deg, #FFC240 0%, #A0D7C7 100%); 
