@@ -52,6 +52,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'PT Sans', sans-serif;
+
+    word-break: break-word; /* Перенос заголовков при необходимости */
 }
 
 /*СЕКЦИИ*/
@@ -279,13 +281,13 @@ section{
     border-radius: 1em;
     overflow: hidden;
     display: grid;
-    grid-template-areas: "img text"; /* Изображение слева, текст справа */
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img text";
+    grid-template-columns: 50% 1fr;
     grid-template-rows: auto;
-    column-gap: 10rem;
+    column-gap: 3rem;
     align-items: center;
     transition: transform 0.3s ease;
-    max-width: 90vw;
+    width: 90vw;
     padding: 30px;
     background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.png);
     background-color: white;
@@ -295,19 +297,24 @@ section{
     background-size: cover;
 }
 
-.card__content figure img{
-    width: 650px;
+.card__content figure img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
     border-radius: 1em;
+    display: block;
 }
 
 .card_text {
-    text-align: justify;
-    width: 50rem;
+    max-width: 100%; /* Не превышает ширину контейнера */
     margin: 20px;
-    position: relative; /* Добавляем относительное позиционирование */
-    min-height: 100%; /* Чтобы контейнер занимал всю высоту */
-    display: flex; /* Включаем flexbox */
-    flex-direction: column; /* Вертикальное расположение элементов */
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow-wrap: break-word; /* Альтернативное свойство для переноса */
+    hyphens: auto; /* Автоматическая расстановка переносов (если поддерживается) */
 }
 
 .card_text h3 {
