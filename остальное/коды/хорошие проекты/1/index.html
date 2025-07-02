@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лекарственные растения Бурятии | БГСХА</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700;800&family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка интегрирована с героем -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <svg width="50" height="50" viewBox="0 0 50 50">
+                    <circle cx="25" cy="25" r="20" fill="#C9243F"/>
+                    <path d="M20 15 L30 25 L20 35" stroke="white" stroke-width="3" fill="none"/>
+                </svg>
+                <div class="logo-text">БГСХА</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#plants">Растения</a></li>
+                    <li><a href="#ecology">Экология</a></li>
+                    <li><a href="#agro">Агроклассы</a></li>
+                    <li><a href="#quiz">Викторина</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Герой -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Открой мир лекарственных растений Бурятии</h1>
+            <p>Интерактивное путешествие о природе, науке и будущих профессиях</p>
+            <a href="#about" class="btn btn-primary">Начать путешествие</a>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- О проекте -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>О проекте</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Этот сайт — интерактивный гид по миру лекарственных растений Бурятии. Здесь вы узнаете, где они растут, как сохранять природу, а также какие профессии ждут будущих аграриев и экологов.</p>
+                    <p>Проект создан при поддержке БГСХА для школьников, студентов и всех, кто интересуется природой родного края и современными аграрными профессиями.</p>
+                    
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-book-open"></i>
+                            <h3>Образование</h3>
+                            <p>Познавательные материалы о растениях Бурятии</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Экология</h3>
+                            <p>Как сохранить природу для будущих поколений</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>Профориентация</h3>
+                            <p>Перспективные профессии в сельском хозяйстве</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-mountain"></i>
+                            <h3>Наследие региона</h3>
+                            <p>Уникальные растения Бурятии и их применение</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Лекарственные растения Бурятии">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта-путеводитель -->
+    <section class="journey-map">
+        <div class="container">
+            <div class="section-title">
+                <h2>Карта путешествия</h2>
+            </div>
+            <div class="map-container">
+                <div class="map-line"></div>
+                <div class="map-points">
+                    <div class="map-point">
+                        <i class="fas fa-seedling"></i>
+                        <span class="point-label">Растения</span>
+                    </div>
+                    <div class="map-point">
+                        <i class="fas fa-recycle"></i>
+                        <span class="point-label">Экология</span>
+                    </div>
+                    <div class="map-point">
+                        <i class="fas fa-school"></i>
+                        <span class="point-label">Агроклассы</span>
+                    </div>
+                    <div class="map-point">
+                        <i class="fas fa-user-graduate"></i>
+                        <span class="point-label">Профессии</span>
+                    </div>
+                    <div class="map-point">
+                        <i class="fas fa-question-circle"></i>
+                        <span class="point-label">Викторина</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Растения -->
+    <section class="plants" id="plants">
+        <div class="container">
+            <div class="section-title">
+                <h2>Лекарственные растения Бурятии</h2>
+            </div>
+            <div class="plants-grid">
+                <!-- Карточки растений -->
+                <div class="plant-card">
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Родиола розовая">
+                    </div>
+                    <div class="plant-content">
+                        <h3>Родиола розовая</h3>
+                        <div class="plant-latin">Rhodiola rosea</div>
+                        <div class="plant-buryat">
+                            <i class="fas fa-language"></i> Алтан галуу
+                        </div>
+                        <p>Мощный адаптоген, повышающий сопротивляемость организма к стрессам и инфекциям.</p>
+                        <button class="btn btn-secondary" onclick="openPlantModal(0)">Узнать больше</button>
+                    </div>
+                </div>
+                
+                <div class="plant-card">
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Саган-дайля">
+                    </div>
+                    <div class="plant-content">
+                        <h3>Саган-дайля</h3>
+                        <div class="plant-latin">Rhododendron adamsii</div>
+                        <div class="plant-buryat">
+                            <i class="fas fa-language"></i> Сагаан дали
+                        </div>
+                        <p>Тонизирующее растение, традиционно используемое в бурятской медицине.</p>
+                        <button class="btn btn-secondary" onclick="openPlantModal(1)">Узнать больше</button>
+                    </div>
+                </div>
+                
+                <div class="plant-card">
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Облепиха">
+                    </div>
+                    <div class="plant-content">
+                        <h3>Облепиха</h3>
+                        <div class="plant-latin">Hippophae rhamnoides</div>
+                        <div class="plant-buryat">
+                            <i class="fas fa-language"></i> Ямаан модон
+                        </div>
+                        <p>Ценное поливитаминное растение с уникальным составом полезных веществ.</p>
+                        <button class="btn btn-secondary" onclick="openPlantModal(2)">Узнать больше</button>
+                    </div>
+                </div>
+                
+                <div class="plant-card">
+                    <div class="plant-image">
+                        <img src="https://images.unsplash.com/photo-1603398748227-15c5b5558e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Зверобой">
+                    </div>
+                    <div class="plant-content">
+                        <h3>Зверобой</h3>
+                        <div class="plant-latin">Hypericum perforatum</div>
+                        <div class="plant-buryat">
+                            <i class="fas fa-language"></i> Арьяатан эм
+                        </div>
+                        <p>Антидепрессант растительного происхождения с широким спектром применения.</p>
+                        <button class="btn btn-secondary" onclick="openPlantModal(3)">Узнать больше</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Экология -->
+    <section class="ecology" id="ecology">
+        <div class="container">
+            <div class="section-title">
+                <h2>Экология и устойчивость</h2>
+            </div>
+            <div class="ecology-content">
+                <h3>Почему важно сохранять лекарственные растения?</h3>
+                
+                <div class="ecology-stats">
+                    <div class="stat">
+                        <i class="fas fa-prescription-bottle"></i>
+                        <h3>70%</h3>
+                        <p>лекарств имеют растительное происхождение</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>15%</h3>
+                        <p>лекарственных растений находятся под угрозой исчезновения</p>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3>90%</h3>
+                        <p>дикорастущих растений собираются с нарушениями</p>
+                    </div>
+                </div>
+                
+                <div class="ecology-tips">
+                    <div class="tip">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Собирайте ответственно</h4>
+                            <p>Берите не более 20% растений на одной территории, оставляйте корни для восстановления.</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Узнавайте статус растения</h4>
+                            <p>Некоторые виды занесены в Красную книгу и их сбор запрещен.</p>
+                        </div>
+                    </div>
+                    <div class="tip">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Поддерживайте культивацию</h4>
+                            <p>Выращивание лекарственных растений на приусадебных участках снижает нагрузку на дикую природу.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Агроклассы -->
+    <section class="agro-classes" id="agro">
+        <div class="container">
+            <div class="section-title">
+                <h2>Агроклассы и БГСХА</h2>
+            </div>
+            <div class="agro-container">
+                <div class="agro-image">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Агроклассы">
+                </div>
+                <div class="agro-content">
+                    <h2>Агроклассы — путь в аграрные профессии</h2>
+                    <p>Бурятская государственная сельскохозяйственная академия имени В.Р. Филиппова ведет активную работу со школьниками республики. В агроклассах ученики знакомятся с основами сельского хозяйства, экологии и биотехнологий.</p>
+                    <p>Участники агроклассов принимают участие в научных экспедициях, где изучают лекарственные растения Бурятии, их свойства и способы сохранения биоразнообразия.</p>
+                    <p>Программа агроклассов включает практические занятия, мастер-классы от ведущих ученых академии и знакомство с современными аграрными профессиями.</p>
+                    <a href="https://bgsha.ru" class="btn btn-primary" target="_blank">Подробнее о БГСХА</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Профессии будущего (обновлено по приемной кампании БГСХА) -->
+    <section class="professions" id="professions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Профессии будущего</h2>
+            </div>
+            <div class="professions-grid">
+                <div class="profession-card">
+                    <div class="profession-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Агроном-технолог</h3>
+                    <p>Специалист по выращиванию лекарственных растений с использованием современных технологий.</p>
+                    <button class="btn btn-secondary">Хочу так работать!</button>
+                </div>
+                <div class="profession-card">
+                    <div class="profession-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Биотехнолог</h3>
+                    <p>Специалист по созданию новых продуктов на основе растительного сырья.</p>
+                    <button class="btn btn-secondary">Хочу так работать!</button>
+                </div>
+                <div class="profession-card">
+                    <div class="profession-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Эколог-аудитор</h3>
+                    <p>Специалист по оценке воздействия на окружающую среду и разработке природоохранных мер.</p>
+                    <button class="btn btn-secondary">Хочу так работать!</button>
+                </div>
+                <div class="profession-card">
+                    <div class="profession-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Агроинженер</h3>
+                    <p>Специалист по разработке и внедрению современных сельскохозяйственных технологий.</p>
+                    <button class="btn btn-secondary">Хочу так работать!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Викторина с пошаговой системой -->
+    <section class="quiz" id="quiz">
+        <div class="container">
+            <div class="section-title">
+                <h2>Проверь свои знания</h2>
+            </div>
+            <p>Ответь на несколько вопросов о лекарственных растениях Бурятии и получи сертификат знатока природы!</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-content" id="quizContent">
+                    <div class="question active" id="q1">
+                        <h3>1. Какое растение называют "золотым корнем"?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q1" value="1"> Родиола розовая
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="2"> Саган-дайля
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="3"> Облепиха
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q1" value="4"> Зверобой
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q2">
+                        <h3>2. Какой процент лекарственных растений Бурятии находится под угрозой исчезновения?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q2" value="1"> 5%
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="2"> 15%
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="3"> 30%
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q2" value="4"> 50%
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="question" id="q3">
+                        <h3>3. Какое растение традиционно используют бурятские шаманы в ритуалах?</h3>
+                        <div class="options">
+                            <label class="option">
+                                <input type="radio" name="q3" value="1"> Облепиха
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="2"> Саган-дайля
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="3"> Зверобой
+                            </label>
+                            <label class="option">
+                                <input type="radio" name="q3" value="4"> Родиола розовая
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-navigation">
+                        <button class="btn btn-secondary" id="prevBtn" style="display: none;">Назад</button>
+                        <button class="btn btn-primary" id="nextBtn">Следующий вопрос</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quizResult">
+                    <h3>Молодец!</h3>
+                    <p>Ты правильно ответил на <span id="score">8</span> из 10 вопросов и доказал, что отлично разбираешься в лекарственных растениях Бурятии!</p>
+                    <p>Поделись своим результатом с друзьями:</p>
+                    <div class="result-share">
+                        <a href="#" class="share-btn"><i class="fab fa-vk"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="share-btn"><i class="fab fa-odnoklassniki"></i></a>
+                    </div>
+                    <button class="btn btn-primary" onclick="restartQuiz()">Пройти еще раз</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Источники -->
+    <section class="sources" id="sources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Источники и полезные ссылки</h2>
+            </div>
+            <div class="sources-grid">
+                <div class="source-card">
+                    <div class="source-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Официальный сайт БГСХА</h3>
+                    <p>Вся информация о академии, факультетах и программах обучения</p>
+                    <a href="https://bgsha.ru" target="_blank">Перейти на сайт</a>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Агроклассы БГСХА</h3>
+                    <p>Программа для школьников по изучению сельского хозяйства</p>
+                    <a href="https://bgsha.ru/agroclasses" target="_blank">Узнать больше</a>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Проект "БайкалБиоФарм"</h3>
+                    <p>Стратегический проект развития БГСХА до 2030 года</p>
+                    <a href="https://2030.bgsha.ru" target="_blank">Ознакомиться</a>
+                </div>
+                <div class="source-card">
+                    <div class="source-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Институт непрерывного образования</h3>
+                    <p>Дополнительное образование и курсы повышения квалификации</p>
+                    <a href="https://dpo.bgsha.ru" target="_blank">Посетить сайт</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-links">
+                    <div class="footer-logo">
+                        <svg width="50" height="50" viewBox="0 0 50 50">
+                            <circle cx="25" cy="25" r="20" fill="#C9243F"/>
+                            <path d="M20 15 L30 25 L20 35" stroke="white" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <p>Бурятская государственная сельскохозяйственная академия имени В.Р. Филиппова</p>
+                    <p class="slogan">ЗНАНИЯ ДЛЯ НАШЕГО БУДУЩЕГО</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-odnoklassniki"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#about">О проекте</a></li>
+                        <li><a href="#plants">Растения</a></li>
+                        <li><a href="#ecology">Экология</a></li>
+                        <li><a href="#agro">Агроклассы</a></li>
+                        <li><a href="#professions">Профессии</a></li>
+                        <li><a href="#quiz">Викторина</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Контакты</h4>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>670024, г. Улан-Удэ, ул. Пушкина, 8</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (3012) 44-11-77</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@bgsha.ru</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-globe"></i>
+                        <span>www.bgsha.ru</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 БГСХА им. В.Р. Филиппова. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна для растений -->
+    <div class="modal" id="plantModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Контент подгружается через JS -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Данные о растениях
+        const plantsData = [
+            {
+                name: "Родиола розовая",
+                latin: "Rhodiola rosea",
+                buryat: "Алтан галуу",
+                image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                habitat: "Альпийские и субальпийские зоны гор Южной Сибири, растет на скалах и каменистых склонах",
+                application: "Адаптоген, повышает сопротивляемость организма к стрессам, улучшает умственную работоспособность",
+                fact: "Занесена в Красную книгу Бурятии. Сбор ограничен и регулируется законом",
+                moreLink: "https://example.com/rhodiola"
+            },
+            {
+                name: "Саган-дайля",
+                latin: "Rhododendron adamsii",
+                buryat: "Сагаан дали",
+                image: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+                habitat: "Горные тундры, каменистые склоны Восточных Саян, Хамар-Дабана",
+                application: "Тонизирующее средство, антиоксидант, помогает при усталости и переутомлении",
+                fact: "Традиционно используется бурятскими шаманами в ритуалах",
+                moreLink: "https://example.com/sagan-dailya"
+            },
+            {
+                name: "Облепиха",
+                latin: "Hippophae rhamnoides",
+                buryat: "Ямаан модон",
+                image: "https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                habitat: "Поймы рек, берега озер, песчаные почвы по всей территории Бурятии",
+                application: "Источник витаминов С, Е и каротиноидов, заживляет раны, укрепляет иммунитет",
+                fact: "Одно растение может дать до 15 кг ягод за сезон",
+                moreLink: "https://example.com/oblepiha"
+            },
+            {
+                name: "Зверобой",
+                latin: "Hypericum perforatum",
+                buryat: "Арьяатан эм",
+                image: "https://images.unsplash.com/photo-1603398748227-15c5b5558e3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+                habitat: "Луга, опушки лесов, поляны по всей республике",
+                application: "Антидепрессант, противовоспалительное, заживляющее средство",
+                fact: "В Бурятии встречается 8 видов зверобоя, но лекарственным считается только зверобой продырявленный",
+                moreLink: "https://example.com/zveroboy"
+            }
+        ];
+
+        // Открытие модального окна
+        function openPlantModal(index) {
+            const plant = plantsData[index];
+            const modalBody = document.getElementById('modalBody');
+            
+            modalBody.innerHTML = `
+                <div class="modal-plant">
+                    <div class="modal-plant-image">
+                        <img src="${plant.image}" alt="${plant.name}">
+                    </div>
+                    <div class="modal-plant-info">
+                        <h3>${plant.name}</h3>
+                        <div class="plant-latin">${plant.latin}</div>
+                        <div class="plant-buryat">
+                            <i class="fas fa-language"></i> ${plant.buryat}
+                        </div>
+                        
+                        <div class="plant-details">
+                            <h4>Особенности растения</h4>
+                            <ul>
+                                <li><strong>Место произрастания:</strong> ${plant.habitat}</li>
+                                <li><strong>Применение:</strong> ${plant.application}</li>
+                                <li><strong>Интересный факт:</strong> ${plant.fact}</li>
+                            </ul>
+                        </div>
+                        
+                        <a href="${plant.moreLink}" class="read-more" target="_blank">Читать подробнее</a>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('plantModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Закрытие модального окна
+        function closeModal() {
+            document.getElementById('plantModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Логика викторины
+        let currentQuestion = 1;
+        const totalQuestions = 3; // Для демо - 3 вопроса, в реальности 10
+        
+        function showQuestion(num) {
+            document.querySelectorAll('.question').forEach(q => {
+                q.classList.remove('active');
+            });
+            document.getElementById(`q${num}`).classList.add('active');
+            
+            // Управление кнопками навигации
+            document.getElementById('prevBtn').style.display = num > 1 ? 'inline-block' : 'none';
+            
+            if (num === totalQuestions) {
+                document.getElementById('nextBtn').textContent = 'Завершить викторину';
+            } else {
+                document.getElementById('nextBtn').textContent = 'Следующий вопрос';
+            }
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < totalQuestions) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                // Завершение викторины
+                document.getElementById('quizContent').style.display = 'none';
+                document.getElementById('quizResult').style.display = 'block';
+            }
+        }
+        
+        function prevQuestion() {
+            if (currentQuestion > 1) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+            }
+        }
+        
+        function restartQuiz() {
+            currentQuestion = 1;
+            document.getElementById('quizContent').style.display = 'block';
+            document.getElementById('quizResult').style.display = 'none';
+            showQuestion(currentQuestion);
+            
+            // Сброс выбранных ответов
+            document.querySelectorAll('.quiz input[type="radio"]').forEach(input => {
+                input.checked = false;
+            });
+        }
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Фиксация шапки при прокрутке
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Мобильное меню
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('show');
+        });
+
+        // Анимация при скролле
+        function checkScroll() {
+            const sections = document.querySelectorAll('section');
+            const features = document.querySelectorAll('.feature');
+            const plantCards = document.querySelectorAll('.plant-card');
+            const stats = document.querySelectorAll('.stat');
+            const professionCards = document.querySelectorAll('.profession-card');
+            const sourceCards = document.querySelectorAll('.source-card');
+            const quizContainer = document.querySelector('.quiz-container');
+            const ecologyTips = document.querySelector('.ecology-tips');
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.85) {
+                    section.classList.add('visible');
+                }
+            });
+            
+            features.forEach(feature => {
+                const featureTop = feature.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (featureTop < windowHeight * 0.85) {
+                    feature.classList.add('visible');
+                }
+            });
+            
+            plantCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight * 0.85) {
+                    card.classList.add('visible');
+                }
+            });
+            
+            stats.forEach(stat => {
+                const statTop = stat.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (statTop < windowHeight * 0.85) {
+                    stat.classList.add('visible');
+                }
+            });
+            
+            professionCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight * 0.85) {
+                    card.classList.add('visible');
+                }
+            });
+            
+            sourceCards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (cardTop < windowHeight * 0.85) {
+                    card.classList.add('visible');
+                }
+            });
+            
+            if (quizContainer) {
+                const quizTop = quizContainer.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (quizTop < windowHeight * 0.85) {
+                    quizContainer.classList.add('visible');
+                }
+            }
+            
+            if (ecologyTips) {
+                const tipsTop = ecologyTips.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (tipsTop < windowHeight * 0.85) {
+                    ecologyTips.classList.add('visible');
+                }
+            }
+        }
+
+        // Инициализация
+        window.addEventListener('load', function() {
+            checkScroll();
+            
+            // Инициализация викторины
+            document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+            document.getElementById('prevBtn').addEventListener('click', prevQuestion);
+            
+            // Показать первый вопрос
+            showQuestion(currentQuestion);
+        });
+        
+        window.addEventListener('scroll', checkScroll);
+    </script>
+</body>
+</html>

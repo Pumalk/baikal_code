@@ -1,0 +1,1506 @@
+
+        /* Брендинг по гайдам БГСХА */
+        :root {
+            --primary-red: #C9243F;
+            --primary-orange: #FEC340;
+            --secondary-turquoise: #A0D7C7;
+            --secondary-purple: #7F3F98;
+            --white: #FFFFFF;
+            --black: #000000;
+            --light-gray: #f5f5f5;
+            --dark-gray: #333333;
+            --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PT Sans', sans-serif;
+            color: var(--dark-gray);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Mulish', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Mulish', sans-serif;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: -1;
+            transition: width 0.5s ease;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-orange);
+            color: var(--dark-gray);
+            box-shadow: 0 5px 15px rgba(254, 195, 64, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(254, 195, 64, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: var(--primary-red);
+            color: var(--white);
+            box-shadow: 0 5px 15px rgba(201, 36, 63, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(201, 36, 63, 0.5);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .animated {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+        }
+
+        .fadeIn {
+            animation-name: fadeIn;
+        }
+
+        .slideUp {
+            animation-name: slideUp;
+        }
+
+        .float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        /* Шапка сайта - интегрирована с hero */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+            padding: 25px 0;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            height: 60px;
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .logo-text {
+            font-family: 'Mulish', sans-serif;
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-orange);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-orange);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+        }
+
+        /* Стиль хедера после прокрутки */
+        header.scrolled {
+            padding: 15px 0;
+            background: rgba(201, 36, 63, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header.scrolled .logo-text,
+        header.scrolled nav ul li a {
+            color: var(--white);
+            text-shadow: none;
+        }
+
+        header.scrolled nav ul li a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Герой - интегрирован с хедером */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s forwards 0.3s;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s forwards 0.6s;
+        }
+
+        .hero .btn {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s forwards 0.9s;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        /* Секции */
+        section {
+            padding: 100px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            display: inline-block;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-orange);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* О проекте */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        .feature.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .feature:nth-child(1) { transition-delay: 0.1s; }
+        .feature:nth-child(2) { transition-delay: 0.2s; }
+        .feature:nth-child(3) { transition-delay: 0.3s; }
+        .feature:nth-child(4) { transition-delay: 0.4s; }
+
+        .feature:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--primary-orange);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .feature:hover i {
+            transform: scale(1.2);
+            color: var(--primary-red);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: var(--primary-red);
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(10deg);
+            transition: var(--transition);
+        }
+
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Карта-путеводитель */
+        .journey-map {
+            position: relative;
+            padding: 100px 0;
+            background-color: rgba(160, 215, 199, 0.1);
+            overflow: hidden;
+        }
+
+        .journey-map::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,100" stroke="rgba(201, 36, 63, 0.05)" stroke-width="1"/></svg>');
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .map-container {
+            position: relative;
+            height: 500px;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .map-line {
+            position: absolute;
+            top: 50%;
+            left: 50px;
+            right: 50px;
+            height: 8px;
+            background: linear-gradient(to right, var(--primary-red), var(--primary-orange));
+            border-radius: 4px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 20px rgba(201, 36, 63, 0.3);
+        }
+
+        .map-points {
+            position: relative;
+            height: 100%;
+        }
+
+        .map-point {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .map-point:hover {
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-point i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .map-point:hover i {
+            transform: scale(1.2);
+            color: var(--primary-orange);
+        }
+
+        .map-point:nth-child(1) { left: 10%; }
+        .map-point:nth-child(2) { left: 25%; }
+        .map-point:nth-child(3) { left: 40%; }
+        .map-point:nth-child(4) { left: 55%; }
+        .map-point:nth-child(5) { left: 70%; }
+
+        .point-label {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            transition: var(--transition);
+            font-family: 'Mulish', sans-serif;
+        }
+
+        .map-point:hover .point-label {
+            opacity: 1;
+            top: -70px;
+        }
+
+        /* Растения */
+        .plants {
+            background-color: var(--white);
+        }
+
+        .plants-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .plant-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .plant-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .plant-card:nth-child(1) { transition-delay: 0.1s; }
+        .plant-card:nth-child(2) { transition-delay: 0.2s; }
+        .plant-card:nth-child(3) { transition-delay: 0.3s; }
+        .plant-card:nth-child(4) { transition-delay: 0.4s; }
+
+        .plant-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .plant-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .plant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .plant-card:hover .plant-image img {
+            transform: scale(1.1);
+        }
+
+        .plant-content {
+            padding: 25px;
+        }
+
+        .plant-content h3 {
+            color: var(--primary-red);
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .plant-card:hover .plant-content h3 {
+            color: var(--primary-orange);
+        }
+
+        .plant-latin {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .plant-buryat {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--secondary-purple);
+            font-weight: 600;
+        }
+
+        .plant-buryat i {
+            margin-right: 8px;
+            transition: var(--transition);
+        }
+
+        .plant-card:hover .plant-buryat i {
+            transform: rotate(15deg);
+        }
+
+        /* Экология - горизонтальное расположение статистики */
+        .ecology {
+            background: linear-gradient(to bottom right, var(--secondary-turquoise), var(--white));
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ecology::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="5" fill="rgba(201, 36, 63, 0.05)"/></svg>');
+            z-index: 0;
+            opacity: 0.3;
+        }
+
+        .ecology-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ecology-stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 20px;
+            min-width: 200px;
+            transform: scale(0.9);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .stat.visible {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .stat:nth-child(1) { transition-delay: 0.1s; }
+        .stat:nth-child(2) { transition-delay: 0.2s; }
+        .stat:nth-child(3) { transition-delay: 0.3s; }
+
+        .stat i {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .stat:hover i {
+            transform: rotate(15deg) scale(1.2);
+            color: var(--primary-orange);
+        }
+
+        .stat h3 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            color: var(--dark-gray);
+        }
+
+        .ecology-tips {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-top: 30px;
+            transform: translateY(30px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .ecology-tips.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .tip {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .tip:hover {
+            transform: translateX(10px);
+        }
+
+        .tip:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .tip i {
+            font-size: 1.8rem;
+            color: var(--primary-orange);
+            margin-right: 15px;
+            min-width: 30px;
+            transition: var(--transition);
+        }
+
+        .tip:hover i {
+            transform: rotate(15deg) scale(1.2);
+            color: var(--primary-red);
+        }
+
+        /* Агроклассы */
+        .agro-classes {
+            background-color: var(--light-gray);
+        }
+
+        .agro-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .agro-image {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: perspective(1000px) rotateY(-10deg);
+            transition: var(--transition);
+        }
+
+        .agro-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .agro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .agro-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .agro-content {
+            flex: 1;
+        }
+
+        .agro-content h2 {
+            color: var(--primary-red);
+            margin-bottom: 20px;
+        }
+
+        .agro-content p {
+            margin-bottom: 25px;
+        }
+
+        /* Профессии будущего (обновлено по приемной кампании БГСХА) */
+        .professions {
+            background-color: var(--white);
+        }
+
+        .professions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .profession-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+            padding: 30px 20px;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .profession-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .profession-card:nth-child(1) { transition-delay: 0.1s; }
+        .profession-card:nth-child(2) { transition-delay: 0.2s; }
+        .profession-card:nth-child(3) { transition-delay: 0.3s; }
+        .profession-card:nth-child(4) { transition-delay: 0.4s; }
+
+        .profession-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .profession-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(201, 36, 63, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+
+        .profession-card:hover .profession-icon {
+            background: rgba(254, 195, 64, 0.2);
+            transform: rotate(15deg) scale(1.1);
+        }
+
+        .profession-icon i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .profession-card:hover .profession-icon i {
+            color: var(--primary-orange);
+            transform: scale(1.2);
+        }
+
+        .profession-card h3 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .profession-card:hover h3 {
+            color: var(--primary-orange);
+        }
+
+        .profession-card p {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Викторина с пошаговой системой */
+        .quiz {
+            background: linear-gradient(to bottom right, var(--primary-red), var(--primary-orange));
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quiz::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="10" fill="rgba(255,255,255,0.05)"/></svg>');
+            z-index: 0;
+        }
+
+        .quiz h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .quiz p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+        }
+
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .quiz-container.visible {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .question {
+            margin-bottom: 30px;
+            text-align: left;
+            display: none;
+        }
+
+        .question.active {
+            display: block;
+        }
+
+        .question h3 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .option {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .option:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(5px);
+        }
+
+        .option input {
+            margin-right: 10px;
+            accent-color: var(--primary-orange);
+        }
+
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .quiz-result {
+            display: none;
+            padding: 30px;
+        }
+
+        .quiz-result h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .quiz-result p {
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        .result-share {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .share-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-red);
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .share-btn:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: var(--primary-orange);
+        }
+
+        /* Источники */
+        .sources {
+            background-color: var(--light-gray);
+        }
+
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .source-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .source-card.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .source-card:nth-child(1) { transition-delay: 0.1s; }
+        .source-card:nth-child(2) { transition-delay: 0.2s; }
+        .source-card:nth-child(3) { transition-delay: 0.3s; }
+        .source-card:nth-child(4) { transition-delay: 0.4s; }
+
+        .source-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .source-icon {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .source-card:hover .source-icon {
+            transform: scale(1.2) rotate(10deg);
+            color: var(--primary-orange);
+        }
+
+        .source-card h3 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .source-card:hover h3 {
+            color: var(--primary-orange);
+        }
+
+        .source-card a {
+            color: var(--secondary-purple);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+            transition: var(--transition);
+        }
+
+        .source-card:hover a {
+            color: var(--primary-red);
+        }
+
+        .source-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Подвал */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="rgba(201, 36, 63, 0.05)"/></svg>');
+            z-index: 0;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-links h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--primary-orange);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary-orange);
+            padding-left: 5px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #ccc;
+            transition: var(--transition);
+        }
+
+        .contact-info:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-orange);
+            transition: var(--transition);
+        }
+
+        .contact-info:hover i {
+            transform: scale(1.2);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            text-align: center;
+            line-height: 40px;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary-orange);
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Модальное окно для растений (без белого фона) */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 15px;
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+            animation: slideUp 0.5s ease;
+            transform-origin: center;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--dark-gray);
+            cursor: pointer;
+            background: none;
+            border: none;
+            z-index: 10;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            transform: rotate(90deg) scale(1.2);
+            color: var(--primary-red);
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-plant-image {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .modal-plant-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .modal-plant-info {
+            padding: 30px;
+        }
+
+        .modal-plant-info h3 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+        }
+
+        .plant-details {
+            margin-top: 30px;
+        }
+
+        .plant-details h4 {
+            color: var(--primary-red);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-orange);
+        }
+
+        .plant-details ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .plant-details ul li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .plant-details ul li::before {
+            content: '•';
+            color: var(--primary-orange);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary-red);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--primary-orange);
+            padding-left: 10px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .about-content, .agro-container {
+                flex-direction: column;
+            }
+            
+            .about-image, .agro-image {
+                margin-top: 30px;
+                width: 100%;
+            }
+            
+            .map-point {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .map-point i {
+                font-size: 1.5rem;
+            }
+            
+            .point-label {
+                font-size: 0.9rem;
+                top: -50px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(201, 36, 63, 0.95);
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .options {
+                grid-template-columns: 1fr;
+            }
+            
+            .map-point {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .map-point i {
+                font-size: 1.2rem;
+            }
+            
+            .point-label {
+                font-size: 0.8rem;
+                top: -45px;
+                padding: 8px 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .ecology-stats {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .map-point {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .map-point i {
+                font-size: 1rem;
+            }
+            
+            .point-label {
+                font-size: 0.7rem;
+                top: -40px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .btn {
+                width: 100%;
+            }
+        }
