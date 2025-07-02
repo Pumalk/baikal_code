@@ -596,8 +596,8 @@ html.modal-open, body.modal-open {
 
 .sketchfab-embed-wrapper {
     position: relative;
-  padding-bottom: 56.25%; /* 16:9 соотношение */
-    height: 400px; /* Фиксированная высота */
+    padding-bottom: 56.25%; /* 16:9 соотношение */
+    height: auto; /* Фиксированная высота */
     overflow: hidden;
     margin-bottom: 20px;
     width: 100% !important;

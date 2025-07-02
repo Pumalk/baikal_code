@@ -16,7 +16,7 @@ const cardsData = {
       xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share 
       src="https://sketchfab.com/models/a4006153fe074868849853bdc83b378d/embed?autospin=1&autostart=1&dnt=1"> 
       </iframe> </div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      herbariumLink: "https://elib.bgsha.ru/hbr/00032",
       habitat: "Естественный ареал вида - район Байкала, Монголия, Корея, Север Китая, Приамурье, Приморский край. Растет на сухих каменистых и глинистых горных склонах, реже в степи, залежи, ивняки по берегам рек.",
       properties: ["Общеукрепляющее", "Седативное", "Гипотензивное", "Диуретическое", "Жаропонижающее", "Антигельминтное", "Гепатопротекторное"],
       facts: {
@@ -35,10 +35,8 @@ const cardsData = {
     fact: "Содержит токсичные алкалоиды: дельфинин и элатин.",
     modalContent: {
       fullDescription: "Вид травянистых растений, относящийся к роду Живокость семейства Лютиковые (Ranunculaceae). Многолетнее травянистое растение с прямостоячим ветвистым стеблем 25-50 см и более высотой, покрытым коротким прижатым белым опушением. Важно: растение ядовито, особенно семена и корни. Применение возможно только под контролем специалистов!",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Живокость крупноцветковая" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8c07ce06fdc14b5d99aa8b3a5a5f0d3a/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00008",
       habitat: "Широко распространена в степных и лесостепных районах Восточной Сибири, Забайкалья, в том числе на территории Бурятии. Предпочитает сухие луга, склоны, опушки. Часто встречается в окрестностях Байкала и на хребтах Саян.",
       properties: ["Противосудорожное", "Болеутоляющее", "Успокаивающее"],
       facts: {
@@ -62,7 +60,7 @@ const cardsData = {
       webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking 
       execution-while-out-of-viewport execution-while-not-rendered web-share 
       src="https://sketchfab.com/models/3a2240f301924c238e32596846b18811/embed?autospin=1&autostart=1&dnt=1"> </iframe> </div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      herbariumLink: "https://elib.bgsha.ru/hbr/00009",
       habitat: "Встречается в степных, лесостепных и предгорных районах Восточной Сибири, включая Бурятию. Произрастает по солнечным склонам, полянам, в разреженных лесах, часто рядом с пастбищами и заброшенными полями.",
       properties: ["Тонизирующее", "Общеукрепляющее", "Противовоспалительное", "Кровоостанавливающее"],
       facts: {
@@ -81,10 +79,8 @@ const cardsData = {
     fact: "Содержит до 10% кремниевой кислоты, а также флавоноиды, сапонины, алкалоиды.",
     modalContent: {
       fullDescription: "Вид многолетних травянистых растений рода Хвощ семейства Хвощовые (Equisetaceae). Многолетнее споровое травянистое растение высотой до 40, редко до 50 см, с длинным ползучим корневищем. На корневищах образуются короткие клубневидные ответвления, с помощью которых происходит вегетативное размножение.",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Хвощ полевой" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/7d9f8e3b3d9f8e3b3d9f8e3b3d9f8e3b/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00113",
       habitat: "Широко распространён в умеренном поясе Европы, Азии, Северной Америки. В Прибайкалье и Бурятии встречается повсеместно: на лугах, по берегам рек, в оврагах, на лесных полянах и опушках. Предпочитает влажные почвы и хорошо освещённые участки.",
       properties: ["Мочегонное", "Противовоспалительное", "Кровоостанавливающее"],
       facts: {
@@ -103,10 +99,8 @@ const cardsData = {
     fact: "Содержит эфирные масла, алкалоиды, флавоноиды, органические кислоты.",
     modalContent: {
       fullDescription: "Вид многолетних травянистых растений рода Пион, семейства Пионовые (Paeoniaceae), высотой около 1 м.",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Пион уклоняющийся" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/9d8e3b3d9f8e3b3d9f8e3b3d9f8e3b3d/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00023",
       habitat: "Произрастает в Сибири, на Алтае, в Казахстане, Монголии, широко распространён в Прибайкалье и Бурятии. Встречается на опушках, в светлых лесах, в горных долинах и по каменистым склонам. Предпочитает рыхлые почвы и умеренное освещение.",
       properties: ["Успокаивающее (седативное)", "Спазмолитическое", "Обезболивающее"],
       facts: {
@@ -125,10 +119,8 @@ const cardsData = {
     fact: "Содержит флавоноиды, органические кислоты, дубильные вещества.",
     modalContent: {
       fullDescription: "Вид травянистых растений рода Проломник (Androsace) семейства Первоцветные (Primulaceae). Однолетнее (озимое) или двулетнее травянистое растение-эфемер, 5-15 см высотой, цветение: май-июль.",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Проломник северный" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/8e3b3d9f8e3b3d9f8e3b3d9f8e3b3d9f/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00105",
       habitat: "Широко распространён в арктической и субарктической зоне Евразии и Северной Америки. В Бурятии встречается в высокогорьях, в сухих каменистых местах, по склонам хребтов, в редколесьях и альпийских лугах, включая районы Байкала.",
       properties: ["Противовоспалительное", "Общеукрепляющее", "Витаминное"],
       facts: {
@@ -147,10 +139,8 @@ const cardsData = {
     fact: "Цветки ярко-красные, с сильным ароматом.",
     modalContent: {
       fullDescription: "Многолетнее луковичное растение, вид рода Лилия, семейства Лилейные (Liliaceae) высотой от 15 до 60 см. Цветение с июня по август.",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Лилия карликовая" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/3d9f8e3b3d9f8e3b3d9f8e3b3d9f8e3b/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00014",
       habitat: "Произрастает в Восточной Сибири, на Дальнем Востоке, в Монголии, Северном Китае и Корее. В Бурятии встречается на сухих южных склонах, в степных районах, редколесьях, на опушках и каменистых лугах. Предпочитает солнечные участки и лёгкие почвы.",
       properties: ["Противокашлевое", "Общеукрепляющее", "Восстанавливающее"],
       facts: {
@@ -175,7 +165,7 @@ const cardsData = {
       allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport 
       execution-while-not-rendered web-share 
       src="https://sketchfab.com/models/936cb3b3fef7422ea563c62b7e8e6248/embed?autospin=1&autostart=1&dnt=1"> </iframe> </div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      herbariumLink: "https://elib.bgsha.ru/hbr/00001",
       habitat: "Произрастает по всей территории Евразии, от Европы до Восточной Сибири, включая Бурятию. Встречается на лугах, в степях, по обочинам дорог, на опушках лесов и склонах холмов.",
       properties: ["Противовоспалительное", "Кровоостанавливающее", "Антисептическое", "Улучшает пищеварение", "Укрепляет иммунитет"],
       facts: {
@@ -194,10 +184,8 @@ const cardsData = {
     fact: "Содержит до 3% алкалоидов в зелёных побегах.",
     modalContent: {
       fullDescription: "Низкорослый вечнозелёный кустарничек семейства Хвойниковые (Ephedraceae), высотой от 10 до 50 см. Цветёт с мая по июнь, плоды - ярко-красные, созревают в июле-августе. Побеги зелёные, членистые, похожи на хвощ.",
-      sketchfabEmbed: `<div class="sketchfab-embed-wrapper">
-  <iframe title="Хвойник односемянный" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e3b3d9f8e3b3d9f8e3b3d9f8e3b3d9f/embed"> </iframe>
-</div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      sketchfabEmbed: `<img src="media/cards/-3D.png" alt="Нет 3D-модели" class="sketchfab-embed-wrapper">`,
+      herbariumLink: "https://elib.bgsha.ru/hbr/00034",
       habitat: "Растёт в Сибири, Монголии, Тибете и Северном Китае. В Бурятии встречается на сухих каменистых склонах, степях, в горных и предгорных районах. Предпочитает бедные почвы, южные экспозиции, хорошо переносит засуху.",
       properties: ["Бронхорасширяющее", "Тонизирующее", "Стимулирующее дыхание", "Повышает давление"],
       facts: {
@@ -217,7 +205,7 @@ const cardsData = {
     modalContent: {
       fullDescription: "Многолетнее травянистое растение семейства Астровые (Asteraceae) высотой 10-30 см. Образует прикорневую розетку листьев и одиночные цветоносы с крупными соцветиями-корзинками.",
       sketchfabEmbed: `<div class="sketchfab-embed-wrapper"> <iframe title="Aster alpinus" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/443de50fa1bd4cfabb33bafc1656e041/embed?autospin=1&autostart=1&dnt=1"> </iframe> </div>`,
-      herbariumLink: "https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549",
+      herbariumLink: "https://elib.bgsha.ru/hbr/00036",
       habitat: "Растет в горных районах Сибири, включая Прибайкалье. Встречается на каменистых склонах, альпийских лугах, в горных тундрах. Предпочитает хорошо дренированные почвы и солнечные места.",
       properties: ["Противовоспалительное", "Жаропонижающее", "Декоративное"],
       facts: {
