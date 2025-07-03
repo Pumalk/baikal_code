@@ -113,6 +113,26 @@ const statIconObserver = new window.IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 document.querySelectorAll('#graph .stat-icon').forEach(icon => statIconObserver.observe(icon));
 
+// --- Анимация появления секции about ---
+const about = document.getElementById('about');
+if (about) {
+    const intro = about.querySelector('.about-intro');
+    const text = about.querySelector('.about-text');
+    if (intro && text) {
+        intro.style.animationPlayState = 'paused';
+        text.style.animationPlayState = 'paused';
+        const aboutObserver = new window.IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    intro.style.animationPlayState = 'running';
+                    text.style.animationPlayState = 'running';
+                    obs.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+        aboutObserver.observe(intro);
+    }
+}
 });
 
 function animateNumber(el, to, duration = 1500) {
