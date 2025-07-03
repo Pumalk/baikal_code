@@ -124,7 +124,6 @@
 </section>
 
 
-
     <section class="history" id="history">
     <h2>Древо знаний</h2>
     <h3 class="history-podz">История изучения лекарственных растений Бурятии</h3>
@@ -348,14 +347,16 @@
 
 
     <section class="victorina" id="victorina">
-        <h2>Проверь свои знания!</h2>
-        <p>
-            •	Формат: 10 вопросов
-o	Один ответ
-o	Поочередное появление вопросов
-o	Подсказка после каждого ответа (правильный/неправильный)
-o	Итог в конце: баллы + расшифровка результата
-        </p>
+        <h2>Викторина «Проверь свои знания!»</h2>
+        <div class="victorina-container">
+            <div class="progress">Вопрос <span id="current-question">1</span> из 10</div>
+            <div class="question-card">
+                <h3 class="question-text"></h3>
+                <div class="options-container"></div>
+                <p class="hint-text"></p>
+                <button class="next-btn" disabled>Далее</button>
+            </div>
+        </div>
     </section>
 
 
@@ -479,10 +480,11 @@ o	Итог в конце: баллы + расшифровка результат
                 <p>© БГСХА, 2025</p>
             </div>
     </footer>
-<a class="back-to-top" id="backToTop" href="#hero">
-    <svg width="24" height="24" fill="white"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
-</a>
+    <a class="back-to-top" id="backToTop" href="#hero">
+        <svg width="24" height="24" fill="white"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </a>
     <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/victorina.js"></script>
 </body>
 <!--https://github.com/Pumalk-->
 </html>

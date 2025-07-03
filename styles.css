@@ -777,8 +777,6 @@ transition: 0.2s linear;
     transition: transform 0.8s ease;
 }
 
-
-
 .card__content {
     transform-origin: 50% 0%;
     will-change: transform;
@@ -1213,11 +1211,141 @@ transform: translateX(calc(-100% + 100vw));
 }
 
 /* ВИКТОРИНА */
-.victorina{
+.victorina {
     background-image: url(media/fon/cyber\ fon.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 4rem 2rem;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.victorina-container, .results-card {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.progress {
+    font-size: 1.2rem;
+    color: #7F3F98;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.question-text {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.options-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.option-btn {
+    padding: 1rem;
+    border: 2px solid #7F3F98;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: #A0D7C7;
+    transform: translateY(-2px);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.option-btn.correct {
+    background: #A0D7C7;
+    border-color: #2e7d32;
+}
+
+.option-btn.incorrect {
+    background: #FFC0C0;
+    border-color: #C92440;
+}
+
+.hint-text {
+    font-style: italic;
+    color: #7F3F98;
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s;
+}
+
+.next-btn, .restart-btn {
+    padding: 0.8rem 2rem;
+    background: #C92440;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.next-btn:hover:not(:disabled), .restart-btn:hover {
+    background: #7F3F98;
+}
+
+.next-btn:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.results-card h3 {
+    color: #C92440;
+    margin-bottom: 1.5rem;
+}
+
+.result-message {
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Анимации для викторины */
+.fade-in {
+    animation: fadeInVictorina 0.5s;
+}
+.fade-out {
+    animation: fadeOutVictorina 0.2s;
+}
+@keyframes fadeInVictorina {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOutVictorina {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(-20px); }
 }
 
 /* ССЫЛКИ */
