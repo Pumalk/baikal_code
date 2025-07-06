@@ -563,11 +563,6 @@ transition: 0.2s linear;
 
 /* БАЙКАЛ В ЦИФРАХ */
 .graph {
-    background-image: url(media/fon/А4_горизонтальный-06.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 40px 0;
 }
 
@@ -1151,11 +1146,10 @@ html.modal-open, body.modal-open {
     width: 100%; /* Меняем 100vw на 100% */
     overflow: hidden;
 
-    background-image: url(media/fon/А4_горизонтальный-02.jpg);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .pin-wrap {
