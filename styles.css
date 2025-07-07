@@ -76,18 +76,20 @@ h1{
 h2{
     font-size: 3rem;
     text-align: center;
-    color: #FFC240; 
-    background-image: linear-gradient(90deg, #FFC240 0%, #A0D7C7 100%); 
+    color: #C92440; 
+    background-image: linear-gradient(90deg, #C92440 , #7F3F98 100%);
     background-clip: text; 
     -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;
 }
 
 h3{
     font-size: 1.6rem;
+    color: black;
+    font-weight: bold; 
 }
 
-h3, h4{
+h4{
     color: #C92440; 
     background-image: linear-gradient(90deg, #C92440 , #7F3F98 100%);
     background-clip: text; 
@@ -141,8 +143,10 @@ a{
 }
 
 .hero-button a {
+    letter-spacing: 1.5px;
+    font-size: 20px;
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -186,9 +190,9 @@ letter-spacing: -0.5em;
 
 .logo-hero {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 10px;
-    width: 200px;
+    width: 650px;
     z-index: 2;
 }
 
@@ -211,8 +215,7 @@ letter-spacing: -0.5em;
 .about-text{
     text-align: justify;
     font-size: 2rem;
-    font-weight: bold;
-    color: #FEC340;
+    color: rgb(90, 90, 90);
 }
 
 @keyframes about-fade-in {
@@ -568,11 +571,9 @@ transition: 0.2s linear;
 
 .graph h2, .graph h3 {
     text-align: center;
-    color: #FEC340;
 }
 
-.graph h3 {
-    background-image: linear-gradient(90deg,#7F3F98, #C92440 50% , #FEC340 100%);
+.graph h3 {    
     margin-bottom: 40px;
 }
 
@@ -638,15 +639,19 @@ transition: 0.2s linear;
 }
 
 .stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #7F3F98;
-    margin-bottom: 15px;
+    font-size: 10rem;
+    margin-bottom: 0;
+}
+
+/* Анимация чисел */
+.count-animate {
+    color: #C9243F;
+    transition: color 0.5s;
 }
 
 .stat-label {
-    font-size: 1.2rem;
-    color: #FEC340;
+    font-size: 2rem;
+    color: black;
     line-height: 1.4;
 }
 
@@ -700,13 +705,7 @@ transition: 0.2s linear;
     transform: translateY(0);
 }
 
-/* Анимация чисел */
-.count-animate {
-    font-weight: bold;
-    font-size: 2em;
-    color: #C9243F;
-    transition: color 0.5s;
-}
+
 
 /* Анимация тегов статистики */
 .stat-tags .tag {
@@ -1360,7 +1359,7 @@ transform: translateX(calc(-100% + 100vw));
 }
 
 .source-card {
-    background: var(--white);
+    background: white;
     border-radius: 15px;
     padding: 30px;
     text-align: center;
@@ -1385,7 +1384,7 @@ transform: translateX(calc(-100% + 100vw));
 .source-icon img {
     width: 200px;
     margin-bottom: 20px;
-    max-height: 100px; /* Ограничиваем высоту иконок */
+    max-height: 200px; /* Ограничиваем высоту иконок */
     object-fit: contain; /* Сохраняем пропорции */
 
 }
