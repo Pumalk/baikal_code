@@ -188,35 +188,6 @@ function selectAnswer(selectedIndex, questionData) {
     const hintText = victorinaSection.querySelector('.hint-text');
     const nextBtn = victorinaSection.querySelector('.next-btn');
 
-    userAnswers[currentQuestionIndex] = selectedIndex;
-
-    optionBtns.forEach((btn, i) => {
-        btn.disabled = true;
-        if (i === questionData.correctIndex) {
-            btn.classList.add('correct');
-        } else if (i === selectedIndex && i !== questionData.correctIndex) {
-            btn.classList.add('incorrect');
-        }
-    });
-
-    if (selectedIndex === questionData.correctIndex) {
-        score++;
-    }
-
-    // Плавное появление подсказки
-    hintText.style.opacity = 0;
-    hintText.textContent = questionData.hint;
-    setTimeout(() => { hintText.style.opacity = 1; }, 50);
-    nextBtn.disabled = false;
-}
-
-function selectAnswer(selectedIndex, questionData) {
-    const optionBtns = victorinaSection.querySelectorAll('.option-btn');
-    const hintText = victorinaSection.querySelector('.hint-text');
-    const nextBtn = victorinaSection.querySelector('.next-btn');
-
-    userAnswers[currentQuestionIndex] = selectedIndex;
-
     optionBtns.forEach((btn, i) => {
         btn.disabled = true;
         if (i === questionData.correctIndex) {
