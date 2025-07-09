@@ -216,31 +216,41 @@ letter-spacing: -0.5em;
     font-size: 2rem;
     color: rgb(90, 90, 90);
 }
+.about-text2{
+    text-align: justify;
+    font-size: 2rem;
+    color: rgb(90, 90, 90);
+}
 
 @keyframes about-fade-in {
-  0% {
+    0% {
     opacity: 0;
     transform: translateY(40px) scale(0.98);
+    -webkit-filter: blur(8px);
     filter: blur(8px);
-  }
-  60% {
+    }
+    60% {
     opacity: 0.7;
+    -webkit-filter: blur(2px);
     filter: blur(2px);
-  }
-  100% {
+    }
+    100% {
     opacity: 1;
     transform: translateY(0) scale(1);
+    -webkit-filter: blur(0);
     filter: blur(0);
-  }
+    }
 }
 
 #about .about-intro,
-#about .about-text {
+#about .about-text,
+#about .about-text2 {
     opacity: 0;
     animation: about-fade-in 1.2s cubic-bezier(.4,0,.2,1) forwards;
 }
 #about .about-intro { animation-delay: 0.2s; }
 #about .about-text { animation-delay: 0.5s; }
+#about .about-text2 { animation-delay: 0.8s; }
 
 
 /* КАРТА ПУТЕШЕСТВИЯ */
@@ -302,7 +312,6 @@ letter-spacing: -0.5em;
 }
 
 /* Цвета иконок согласно палитре */
-.map-icon--hero { background-color: #C9243F; color: white; }
 .map-icon--about { background-color: #FEC340; color: #333; }
 .map-icon--history { background-color: #A0D7C7; color: #333; }
 .map-icon--graph { background-color: #7F3F98; color: white; }
@@ -1503,6 +1512,29 @@ footer p {
 .copyright,
 .social-link {
     text-align: center;
+}
+
+.developer-credit {
+    text-align: center;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    align-self: center;
+    padding: 0;
+}
+
+.developer-credit a {
+    color: #C9243F;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.developer-credit a:hover {
+    color: #8a1a2c;
+}
+
+.year {
+    display: inline-block;
 }
 
 /* КНОПКА "НАВЕРХ" */

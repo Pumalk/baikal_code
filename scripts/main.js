@@ -118,14 +118,17 @@ const about = document.getElementById('about');
 if (about) {
     const intro = about.querySelector('.about-intro');
     const text = about.querySelector('.about-text');
-    if (intro && text) {
+    const text2 = about.querySelector('.about-text2');
+    if (intro && text && text2) {
         intro.style.animationPlayState = 'paused';
         text.style.animationPlayState = 'paused';
+        text2.style.animationPlayState = 'paused';
         const aboutObserver = new window.IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     intro.style.animationPlayState = 'running';
                     text.style.animationPlayState = 'running';
+                    text2.style.animationPlayState = 'running';
                     obs.disconnect();
                 }
             });
