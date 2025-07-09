@@ -187,7 +187,7 @@ function createCard(cardData, container) {
             <div class="modal-content">
                 <div class="modal-media">
                     <div class="media-tabs">
-                        <button class="media-tab active" data-tab="3d">3D Модель</button>
+                        <button class="media-tab active" data-tab="3d">3D Модель/Зарисовка</button>
                         <button class="media-tab" data-tab="photo">Фото</button>
                     </div>
                     ${cardData.modalContent.sketchfabEmbed}
