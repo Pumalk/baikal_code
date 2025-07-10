@@ -28,6 +28,13 @@
 }
 
 /* БАЗОВЫЕ НАСТРОЙКИ */
+:root {
+	--card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--outline-width: 0px;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -733,12 +740,6 @@ transition: 0.2s linear;
 }
 
 /*ГАЛЕРЕЯ РАСТЕНИЙ*/
-:root {
-	--card-height: 40vw;
-	--card-margin: 4vw;
-	--card-top-offset: 1em;
-	--outline-width: 0px;
-}
 .gallery {
     position: relative;
     text-align: left;
@@ -784,6 +785,7 @@ transition: 0.2s linear;
     box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
     color: rgb(10, 5, 7);
     border-radius: 1em;
+    box-sizing: border-box;
     overflow: hidden;
     display: grid;
     grid-template-areas: "img text";
