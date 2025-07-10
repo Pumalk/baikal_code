@@ -205,11 +205,12 @@ letter-spacing: -0.5em;
 
 /* О ПРОЕКТЕ */
 #about {
-    background-image: url(media/photo/1.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 10rem 20rem;
+    padding: 3rem 20rem;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
 }
 
 .about-intro{
