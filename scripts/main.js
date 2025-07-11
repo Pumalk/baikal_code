@@ -165,7 +165,7 @@ function createCard(cardData, container) {
             <h4>Интересный факт:</h4>
             <p>${cardData.fact}</p>
             <a href="#" class="btn btn--accent" data-modal="modal_${cardData.id}">
-                <img src="media/icons in body/информация1.png" alt="Подробнее">
+                <img src="media/icons in body/информация1.webp" alt="Подробнее">
             </a>
         </div>
         <figure style="grid-area: img;">

@@ -1,28 +1,28 @@
 /*загрузка шрифтов*/
 @font-face {
     font-family: 'PT Sans';
-    src: url('/media/fonts/PTS_normal.ttf') format('truetype');
+    src: url('/media/fonts/PTS_normal.woff2') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('/media/fonts/PTS_bold.ttf') format('truetype');
+    src: url('/media/fonts/PTS_bold.woff2') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('/media/fonts/PTS_italic.ttf') format('truetype');
+    src: url('/media/fonts/PTS_italic.woff2') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PT Sans';
-    src: url('/media/fonts/PTS_bold_italic.ttf');
+    src: url('/media/fonts/PTS_bold_italic.woff2') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
@@ -53,7 +53,7 @@ html {
 }
 
 body {
-    background-image: url(media/fon/А4_горизонтальный-01.jpg);
+    background-image: url(media/fon/А4_горизонтальный-01.webp);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ a{
 /*HERO*/
 .hero {
     height: 100vh;
-    background-image: url(media/photo/back.jpeg);
+    background-image: url(media/photo/back.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -788,7 +788,7 @@ transition: 0.2s linear;
     transition: transform 0.3s ease;
     width: 90vw;
     padding: 1.875rem; /* 30px */
-    background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.png);
+    background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.webp);
     background-color: #A0D7C7;
     background-position: center;
     background-attachment: fixed;
@@ -1191,7 +1191,7 @@ html.modal-open, body.modal-open {
 
 /* ВИКТОРИНА */
 .victorina {
-    background-image: url(media/fon/cyber\ fon.png);
+    background-image: url(media/fon/cyber\ fon.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
