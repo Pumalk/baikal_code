@@ -69,9 +69,9 @@ timelineItems.forEach(item => {
     if (!imageBlock) return;
     // определяем направление анимации
     if (item.querySelector('.timeline-content.left')) {
-        imageBlock.style.transform = 'translateX(120px)';
+        imageBlock.style.transform = 'translateX(12rem)';
     } else if (item.querySelector('.timeline-content.right')) {
-        imageBlock.style.transform = 'translateX(-120px)';
+        imageBlock.style.transform = 'translateX(-12rem)';
     }
     imageBlock.style.opacity = '0';
 });
@@ -96,9 +96,9 @@ statItems.forEach((item, i) => {
     if (!icon) return;
     // Четные — справа, нечетные — слева
     if (i % 2 === 0) {
-        icon.style.transform = 'translateX(120px)';
+        icon.style.transform = 'translateX(12rem)';
     } else {
-        icon.style.transform = 'translateX(-120px)';
+        icon.style.transform = 'translateX(-12rem)';
     }
     icon.style.opacity = '0';
 });
