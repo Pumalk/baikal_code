@@ -179,7 +179,7 @@ function createCard(cardData, container) {
     modalElement.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-container">
-            <button class="modal-close">&times;</button>
+            <button class="modal-close"><p>&times;</p></button>
             <div class="modal-header">
                 <h2>${cardData.title}</h2>
                 <div class="modal-names">

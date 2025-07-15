@@ -90,12 +90,13 @@ h2{
 }
 
 h3{
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: black;
     font-weight: bold; 
 }
 
 h4{
+    font-size: 1.75rem; ;
     color: #C92440; 
     background-image: linear-gradient(90deg, #C92440 , #7F3F98 100%);
     background-clip: text; 
@@ -103,13 +104,14 @@ h4{
     -webkit-text-fill-color: transparent;  
 }
 
-p{
-font-size: 1.2rem;
+p, .option-btn{
+font-size: 1.5rem;
 }
 
 a{
     text-decoration: none;
     cursor: pointer;
+    font-size: 1.25rem;
 }
 
 /*HERO*/
@@ -150,7 +152,6 @@ a{
 
 .hero-button a {
     letter-spacing: 0.2rem;
-    font-size: 1.25rem;
     font-weight: bold;
     position: absolute;
     bottom: 1rem;
@@ -215,18 +216,15 @@ letter-spacing: -0.5em;
 
 .about-intro{
     text-align: center;
-    font-size: 2.5rem;
     font-weight: bold;
     color: #C9243F;
 }
 .about-text{
     text-align: justify;
-    font-size: 2rem;
     color: rgb(90, 90, 90);
 }
 .about-text2{
     text-align: justify;
-    font-size: 2rem;
     color: rgb(90, 90, 90);
 }
 
@@ -328,7 +326,6 @@ letter-spacing: -0.5em;
 
 .point-label {
     color: #333;
-    font-size: 1.5rem;
     text-decoration: none;
     padding: 1rem 1.5rem;
     border-radius: 50rem;
@@ -380,7 +377,6 @@ transition: 0.2s linear;
 }
 
 .history-podz{ 
-    font-size: 2.5rem;
     text-align: center;
     margin-bottom: 5rem;
 }
@@ -491,7 +487,6 @@ transition: 0.2s linear;
 .timeline-content h3 {
     margin-top: 0;
     color: #2c3e50;
-    font-size: 1.6em;
     border-bottom: 0.125rem solid #27ae60; /* 2px */
     display: inline-block;
     padding-bottom: 0.3125rem;     /* 5px */
@@ -556,7 +551,6 @@ transition: 0.2s linear;
     border-radius: 1rem;
 }
 .timeline-image-caption {
-    font-size: 1.1rem;
     font-style: italic;
     font-weight: bold;
     color: #7F3F98;
@@ -658,13 +652,11 @@ transition: 0.2s linear;
 }
 
 .stat-label {
-    font-size: 2rem;
     color: black;
     line-height: 1.4;
 }
 
 .stat-text {
-    font-size: 1.2rem;
     color: #333;
     margin-bottom: 0.9375rem; /* 15px */
     font-weight: bold;
@@ -681,7 +673,6 @@ transition: 0.2s linear;
     color: white;
     padding: 0.3125rem 0.9375rem; /* 5px 15px */
     border-radius: 0.9375rem; /* 15px */
-    font-size: 0.9rem;
     transform: translateY(1.25rem); /* 20px */
     transition: all 0.5s ease;
 }
@@ -723,7 +714,6 @@ transition: 0.2s linear;
     color: #222;
     border-radius: 1.25rem; /* 20px */
     padding: 0.25rem 0.875rem; /* 4px 14px */
-    font-size: 1em;
 }
 .stat-tags .tag.tag-animated {
     opacity: 1;
@@ -817,12 +807,10 @@ transition: 0.2s linear;
 
 .card_text h3 {
     text-align: left;
-    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .card_text h4 {
-    font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
@@ -903,7 +891,6 @@ html.modal-open, body.modal-open {
     position: absolute;
     top: 1.25rem; /* 20px */
     right: 1.5625rem; /* 25px */
-    font-size: 2rem; /* 32px */
     background: none;
     border: none;
     color: #777;
@@ -924,13 +911,11 @@ html.modal-open, body.modal-open {
 .modal-header h2 {
     color: #2e7d32;
     margin: 0 0 0.625rem;
-    font-size: 2.2rem;
 }
 
 .modal-names {
     display: flex;
     gap: 1.25rem; /* 20px */
-    font-size: 1.2rem;
 }
 
 .buryat-name {
@@ -984,7 +969,6 @@ html.modal-open, body.modal-open {
     color: #5e35b1;
     margin-top: 0;
     margin-bottom: 0.9375rem; /* 15px */
-    font-size: 1.4rem;
 }
 
 .facts-grid {
@@ -1003,14 +987,12 @@ html.modal-open, body.modal-open {
 }
 
 .fact-value {
-    font-size: 1.5rem;
     font-weight: bold;
     color: #2e7d32;
     margin-bottom: 0.3125rem; /* 5px */
 }
 
 .fact-label {
-    font-size: 0.9rem;
     color: #666;
 }
 
@@ -1025,7 +1007,6 @@ html.modal-open, body.modal-open {
 }
 
 .status-icon {
-    font-size: 2rem;
     flex-shrink: 0;
 }
 
@@ -1196,11 +1177,12 @@ html.modal-open, body.modal-open {
     background-size: cover;
     padding: 4rem 2rem;
     text-align: center;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 .victorina-container, .results-card {
-    max-width: 50rem; /* 800px */
+    max-width: 70vw; /* 800px */
+    max-height: auto;
     margin: 2rem auto;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 1rem; /* 16px */
@@ -1211,14 +1193,12 @@ html.modal-open, body.modal-open {
 }
 
 .progress {
-    font-size: 1.2rem;
     color: #7F3F98;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .question-text {
-    font-size: 1.4rem;
     margin-bottom: 2rem;
     color: #333;
     line-height: 1.5;
@@ -1238,7 +1218,6 @@ html.modal-open, body.modal-open {
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1rem;
     min-height: 3.75rem; /* 60px */
     display: flex;
     align-items: center;
@@ -1284,7 +1263,6 @@ html.modal-open, body.modal-open {
     border: none;
     border-radius: 1.875rem; /* 30px */
     cursor: pointer;
-    font-size: 1rem;
     transition: background-color 0.3s;
     margin-top: 1rem;
 }
@@ -1304,7 +1282,6 @@ html.modal-open, body.modal-open {
 }
 
 .result-message {
-    font-size: 1.3rem;
     margin: 1.5rem 0;
     color: #333;
     font-weight: bold;
@@ -1533,35 +1510,4 @@ footer p {
 .back-to-top:hover {
     background: #FEC340;
     transform: translateY(-0.3125rem); /* -5px */
-}
-
-/* АДАПТАЦИЯ */
-/* --- Мобильные устройства до 480px --- */
-@media (max-width: 480px) {
-    /* Изменяйте размеры шрифтов, отступы, ширину */
-}
-
-/* --- Малые мобильные (481px - 767px) --- */
-@media (min-width: 481px) and (max-width: 767px) {
-    /* Корректируйте сетки, колонки и размеры */
-}
-
-/* --- Планшеты (768px - 1024px) --- */
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* Регулируйте layout, например, уменьшите кол-во колонок */
-}
-
-/* --- Небольшие ноутбуки (1025px - 1280px) --- */
-@media (min-width: 1025px) and (max-width: 1280px) {
-    /* Можно чуть уменьшить шрифты или отступы */
-}
-
-/* --- Большие экраны (1281px - 1600px) --- */
-@media (min-width: 1281px) and (max-width: 1600px) {
-    /* При необходимости увеличьте max-width контейнеров */
-}
-
-/* --- Очень большие экраны (1601px и выше) --- */
-@media (min-width: 1601px) {
-    /* Центрируйте контент или увеличьте его ширину */
 }
