@@ -96,9 +96,9 @@ statItems.forEach((item, i) => {
     if (!icon) return;
     // Четные — справа, нечетные — слева
     if (i % 2 === 0) {
-        icon.style.transform = 'translateX(12rem)';
+        icon.style.transform = 'translateX(8rem)';
     } else {
-        icon.style.transform = 'translateX(-12rem)';
+        icon.style.transform = 'translateX(-8rem)';
     }
     icon.style.opacity = '0';
 });

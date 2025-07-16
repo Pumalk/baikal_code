@@ -76,7 +76,7 @@ h1{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
     font-weight: bold;
-    font-size: 7rem;
+    font-size: 6.5rem;
 }
 
 h2{
@@ -151,6 +151,7 @@ a{
 }
 
 .hero-button a {
+    text-align: center;
     letter-spacing: 0.2rem;
     font-weight: bold;
     position: absolute;
@@ -200,13 +201,13 @@ letter-spacing: -0.5em;
     position: absolute;
     top: 0.5rem;
     left: 0.625rem;
-    width: 40rem;
+    width: 35vw;
     z-index: 2;
 }
 
 /* О ПРОЕКТЕ */
 #about {
-    padding: 3rem 20rem;
+    padding: 5vw 15vw;
 }
 
 #about img {
@@ -226,6 +227,7 @@ letter-spacing: -0.5em;
 .about-text2{
     text-align: justify;
     color: rgb(90, 90, 90);
+    margin-bottom: 3vw;
 }
 
 @keyframes about-fade-in {
@@ -305,7 +307,7 @@ letter-spacing: -0.5em;
     position: relative;
     z-index: 3;
     flex-shrink: 0;
-    margin: 0 2.5rem;
+    margin: 0 2rem;
     transition: all 0.3s ease;
 }
 
@@ -325,6 +327,7 @@ letter-spacing: -0.5em;
 .map-icon--link { background-color: #7F3F98; color: white; }
 
 .point-label {
+    max-width: 50vw;
     color: #333;
     text-decoration: none;
     padding: 1rem 1.5rem;
@@ -351,7 +354,7 @@ letter-spacing: -0.5em;
 .map-point:hover .point-label {
     background-color: #C9243F;
     color: #FFFFFF;
-    transform: translateX(1rem);
+    transform: translateX(1vw);
     border-color: rgba(255, 255, 255, 0.3);
 transition: 0.2s linear;
 }
@@ -362,11 +365,11 @@ transition: 0.2s linear;
 }
 
 .map-point:nth-child(odd) .point-label {
-    transform: translateX(-7rem);
+    transform: translateX(-10vw);
 }
 
 .map-point:nth-child(odd):hover .point-label {
-    transform: translateX(-1rem);
+    transform: translateX(-1vw);
 }
 
 /* ИСТОРИЯ */
@@ -383,7 +386,7 @@ transition: 0.2s linear;
 
 .history-timeline {
     position: relative;
-    max-width: 60vw;
+    max-width: 80vw;
     margin: 0 auto;
     padding: 5rem 0 0;
 }
@@ -542,8 +545,14 @@ transition: 0.2s linear;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.8s, transform 0.8s;
+}
+
+.timeline-image-block2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .timeline-image {
@@ -634,14 +643,14 @@ transition: 0.2s linear;
 }
 
 .graph img {
-    max-height: 30rem;
+    max-width: 30vw;
     object-fit: contain;
     border-radius: 0.9375rem; /* 15px */
     display: block;
 }
 
 .stat-number {
-    font-size: 10rem;
+    font-size: 10vw;
     margin-bottom: 0;
 }
 
@@ -688,7 +697,7 @@ transition: 0.2s linear;
     margin: 2.5rem auto 0; /* 40px auto 0 */
     padding: 0 1.25rem; /* 20px */
     text-align: center;
-    color: white;
+    color: black;
     font-style: italic;
 }
 
@@ -758,6 +767,7 @@ transition: 0.2s linear;
     justify-content: center;
 
     transition: transform 0.8s ease;
+    box-sizing: border-box;
 }
 
 .card__content {
@@ -775,6 +785,8 @@ transition: 0.2s linear;
     column-gap: 3rem;
     align-items: center;
     transition: transform 0.3s ease;
+    height: auto;
+    max-height:var(--card-height);
     width: 90vw;
     padding: 1.875rem; /* 30px */
     background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.webp);
@@ -1177,7 +1189,6 @@ html.modal-open, body.modal-open {
     background-size: cover;
     padding: 4rem 2rem;
     text-align: center;
-    height: 100vh;
 }
 
 .victorina-container, .results-card {
@@ -1312,7 +1323,7 @@ html.modal-open, body.modal-open {
 
 .sources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr)); /* 280px */
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); /* 280px */
     row-gap: 4.375rem; /* 7rem = 112px */
     column-gap: 1.25rem; /* 2rem = 32px */
     margin-bottom: 3.125rem; /* 5rem = 80px */
@@ -1397,7 +1408,7 @@ footer p {
 }
 
 .footer-logo {
-    width: 31.25rem; /* 500px */
+    width: 30vw; /* 500px */
     grid-area: 1 / 1 / 2 / 2;
     text-align: center;
 }
