@@ -2,6 +2,7 @@
 @font-face {
     font-family: 'PT Sans';
     src: url('/media/fonts/PTS_normal.woff2') format('truetype');
+    font-display: swap;
     font-weight: normal;
     font-style: normal;
 }
@@ -11,6 +12,7 @@
     src: url('/media/fonts/PTS_bold.woff2') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -18,6 +20,7 @@
     src: url('/media/fonts/PTS_italic.woff2') format('truetype');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -25,6 +28,7 @@
     src: url('/media/fonts/PTS_bold_italic.woff2') format('truetype');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
 
 /* БАЗОВЫЕ НАСТРОЙКИ */
