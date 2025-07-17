@@ -203,3 +203,74 @@
         --card-height: 90vw;
     }
 }
+
+/* Отключаем hover-эффекты для тач-устройств */
+@media (hover: none) and (pointer: coarse) {
+    .hero-button a:hover {
+    background-color: #C9243F; /* Возвращаем исходный цвет */
+    }
+
+    .map-point:hover .map-icon {
+    transform: none;
+    box-shadow: none;
+    }
+
+    .map-point:hover .point-label {
+    background-color: white;
+    color: #333;
+    transform: none;
+    border-color: transparent;
+    }
+
+    .map-point:nth-child(odd):hover .point-label {
+    transform: none;
+    }
+
+    .card_text a:hover img {
+    transform: none;
+    }
+
+    .option-btn:hover:not(:disabled) {
+    background: white;
+    transform: none;
+    }
+
+    .next-btn:hover:not(:disabled),
+    .restart-btn:hover {
+    background: #C92440;
+    }
+
+    .source-card:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .back-to-top:hover {
+    background: #C9243F;
+    transform: none;
+    }
+
+    .modal-close:hover {
+    color: #777;
+    }
+
+    .btn--herbarium:hover {
+    background-color: #2e7d32;
+    }
+
+    .timeline-content:hover {
+    transform: none;
+    }
+
+    .source-card:hover h3 {
+        color: #A0D7C7;
+    }
+
+    .source-card a:hover{
+        text-decoration: none;
+    }
+
+    .developer-credit a:hover {
+        color: #C9243F;
+    }
+}
