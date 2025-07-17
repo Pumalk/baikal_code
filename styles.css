@@ -37,6 +37,10 @@
 	--card-margin: 4vw;
 	--card-top-offset: 1em;
 	--outline-width: 0;
+    --color-red: #C92440;
+    --color-yellow: #FFC240;
+    --color-purple: #7F3F98;
+    --color-biruze: #A0D7C7;
 }
 
 html, body {
@@ -73,8 +77,8 @@ section{
 }
 
 h1{
-    color: #C92440; 
-    background-image: linear-gradient(90deg,#C92440 , #FFC240 100%); 
+    color: var(--color-red); 
+    background-image: linear-gradient(90deg,var(--color-red) , var(--color-yellow) 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
@@ -85,8 +89,8 @@ h1{
 h2{
     font-size: 3rem;
     text-align: center;
-    color: #C92440; 
-    background-image: linear-gradient(90deg, #C92440 , #7F3F98 100%);
+    color: var(--color-red);
+    background-image: linear-gradient(90deg, var(--color-red), var(--color-purple) 100%);
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;
@@ -100,8 +104,8 @@ h3{
 
 h4{
     font-size: 1.75rem; ;
-    color: #C92440; 
-    background-image: linear-gradient(90deg, #C92440 , #7F3F98 100%);
+    color: var(--color-red);
+    background-image: linear-gradient(90deg, var(--color-red), var(--color-purple) 100%);
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent;  
@@ -145,8 +149,8 @@ a{
 }
 
 .hero-text h2{
-    color: #C9243F; 
-    background-image: linear-gradient(90deg, #C9243F 0%, #7F3F98 100%); 
+    color: var(--color-red); 
+    background-image: linear-gradient(90deg, var(--color-red) 0%, var(--color-purple) 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
@@ -165,14 +169,14 @@ a{
     text-decoration: none;
     color: white;
     border-radius: 5rem;
-    background-color: #C9243F;
+    background-color: var(--color-red);
     transition: background-color 0.5s ease;
     -webkit-animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: tracking-in-expand 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .hero-button a:hover {
-    background-color: #FEC340;
+    background-color: var(--color-yellow);
 }
 
 @-webkit-keyframes tracking-in-expand {
@@ -221,7 +225,7 @@ letter-spacing: -0.5em;
 .about-intro{
     text-align: center;
     font-weight: bold;
-    color: #C9243F;
+    color: var(--color-red);
 }
 .about-text{
     text-align: justify;
@@ -279,7 +283,7 @@ letter-spacing: -0.5em;
     transform: translateX(-50%);
     width: 0.375rem;
     height: calc(100% - 6.25rem);
-    background: linear-gradient(to bottom, #7F3F98, #A0D7C7, #FEC340);
+    background: linear-gradient(to bottom, var(--color-purple), var(--color-biruze), var(--color-yellow));
     border-radius: 0.1875rem;
 }
 
@@ -321,13 +325,13 @@ letter-spacing: -0.5em;
 }
 
 /* Цвета иконок согласно палитре */
-.map-icon--about { background-color: #FEC340; color: #333; }
-.map-icon--history { background-color: #A0D7C7; color: #333; }
-.map-icon--graph { background-color: #7F3F98; color: white; }
-.map-icon--gallery { background-color: #C9243F; color: white; }
-.map-icon--agroclass { background-color: #FEC340; color: #333; }
-.map-icon--victorina { background-color: #A0D7C7; color: #333; }
-.map-icon--link { background-color: #7F3F98; color: white; }
+.map-icon--about { background-color: var(--color-yellow); color: #333; }
+.map-icon--history { background-color: var(--color-biruze); color: #333; }
+.map-icon--graph { background-color: var(--color-purple); color: white; }
+.map-icon--gallery { background-color: var(--color-red); color: white; }
+.map-icon--agroclass { background-color: var(--color-yellow); color: #333; }
+.map-icon--victorina { background-color: var(--color-biruze); color: #333; }
+.map-icon--link { background-color: var(--color-purple); color: white; }
 
 .point-label {
     max-width: 50vw;
@@ -355,7 +359,7 @@ letter-spacing: -0.5em;
 }
 
 .map-point:hover .point-label {
-    background-color: #C9243F;
+    background-color: var(--color-red);
     color: #FFFFFF;
     transform: translateX(1vw);
     border-color: rgba(255, 255, 255, 0.3);
@@ -402,7 +406,7 @@ letter-spacing: -0.5em;
     width: 0.5rem;
     transform: translateX(-50%);
     z-index: 0;
-    background: linear-gradient(to bottom, #FEC340, #C9243F, #7F3F98);
+    background: linear-gradient(to bottom, var(--color-yellow), var(--color-red), var(--color-purple));
 }
 
 .timeline-start {
@@ -565,7 +569,7 @@ letter-spacing: -0.5em;
 .timeline-image-caption {
     font-style: italic;
     font-weight: bold;
-    color: #7F3F98;
+    color: var(--color-purple);
     text-align: center;
     margin-top: 1rem;
 }
@@ -659,7 +663,7 @@ letter-spacing: -0.5em;
 
 /* Анимация чисел */
 .count-animate {
-    color: #C9243F;
+    color: var(--color-red);
     transition: color 0.5s;
 }
 
@@ -681,7 +685,7 @@ letter-spacing: -0.5em;
 }
 
 .tag {
-    background-color: #7F3F98;
+    background-color: var(--color-purple);
     color: white;
     padding: 0.3125rem 0.9375rem; /* 5px 15px */
     border-radius: 0.9375rem; /* 15px */
@@ -722,7 +726,7 @@ letter-spacing: -0.5em;
     transition: opacity 0.5s, transform 0.5s;
     display: inline-block;
     margin: 0 0.3125rem 0.3125rem 0; /* 5px */
-    background: #FEC340;
+    background: var(--color-yellow);
     color: #222;
     border-radius: 1.25rem; /* 20px */
     padding: 0.25rem 0.875rem; /* 4px 14px */
@@ -793,7 +797,7 @@ letter-spacing: -0.5em;
     width: 90vw;
     padding: 1.875rem; /* 30px */
     background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.webp);
-    background-color: #A0D7C7;
+    background-color: var(--color-biruze);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -1083,7 +1087,7 @@ html.modal-open, body.modal-open {
 }
 
 .media-tab.active {
-    background: #C9243F;
+    background: var(--color-red);
     color: white;
 }
 
@@ -1207,7 +1211,7 @@ html.modal-open, body.modal-open {
 }
 
 .progress {
-    color: #7F3F98;
+    color: var(--color-purple);
     margin-bottom: 1rem;
     font-weight: bold;
 }
@@ -1227,7 +1231,7 @@ html.modal-open, body.modal-open {
 
 .option-btn {
     padding: 1rem;
-    border: 0.125rem solid #7F3F98; /* 2px */
+    border: 0.125rem solid var(--color-purple); /* 2px */
     border-radius: 0.5rem; /* 8px */
     background: white;
     cursor: pointer;
@@ -1240,7 +1244,7 @@ html.modal-open, body.modal-open {
 }
 
 .option-btn:hover:not(:disabled) {
-    background: #A0D7C7;
+    background: var(--color-biruze);
     transform: translateY(-0.125rem); /* -2px */
 }
 
@@ -1250,18 +1254,18 @@ html.modal-open, body.modal-open {
 }
 
 .option-btn.correct {
-    background: #A0D7C7;
+    background: var(--color-biruze);
     border-color: #2e7d32;
 }
 
 .option-btn.incorrect {
     background: #FFC0C0;
-    border-color: #C92440;
+    border-color: var(--color-red);
 }
 
 .hint-text {
     font-style: italic;
-    color: #7F3F98;
+    color: var(--color-purple);
     margin-bottom: 1.5rem;
     min-height: 3.125rem; /* 50px */
     display: flex;
@@ -1272,7 +1276,7 @@ html.modal-open, body.modal-open {
 
 .next-btn, .restart-btn {
     padding: 0.8rem 2rem;
-    background: #C92440;
+    background: var(--color-red);
     color: white;
     border: none;
     border-radius: 1.875rem; /* 30px */
@@ -1282,7 +1286,7 @@ html.modal-open, body.modal-open {
 }
 
 .next-btn:hover:not(:disabled), .restart-btn:hover {
-    background: #7F3F98;
+    background: var(--color-purple);
 }
 
 .next-btn:disabled {
@@ -1291,7 +1295,7 @@ html.modal-open, body.modal-open {
 }
 
 .results-card h3 {
-    color: #C92440;
+    color: var(--color-red);
     margin-bottom: 1.5rem;
 }
 
@@ -1365,13 +1369,13 @@ html.modal-open, body.modal-open {
 }
 
 .source-card h3 {
-    color: #A0D7C7;
+    color: var(--color-biruze);
     margin-bottom: 0.9375rem; /* 15px */
     transition: var(--transition);
 }
 
 .source-card:hover h3 {
-    color: #FEC340;
+    color: var(--color-yellow);
 }
 
 .source-card p {
@@ -1380,7 +1384,7 @@ html.modal-open, body.modal-open {
 }
 
 .source-card a {
-    color: #C9243F;
+    color: var(--color-red);
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -1395,7 +1399,7 @@ html.modal-open, body.modal-open {
 /* ФУТЕР */
 footer {
     max-width: 100%;
-    background: linear-gradient(135deg, #A0D7C7 0%, #fec340 100%);
+    background: linear-gradient(135deg, var(--color-biruze) 0%, var(--color-yellow) 100%);
     padding: 1.25rem; /* 20px */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1427,7 +1431,7 @@ footer p {
 
 .call a {
     text-decoration: none;
-    color: #C9243F;
+    color: var(--color-red);
 }
 
 .call img {
@@ -1489,7 +1493,7 @@ footer p {
 }
 
 .developer-credit a {
-    color: #C9243F;
+    color: var(--color-red);
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
@@ -1511,7 +1515,7 @@ footer p {
     width: 3.125rem; /* 50px */
     height: 3.125rem; /* 50px */
     border-radius: 50%;
-    background: #C9243F;
+    background: var(--color-red);
     color: white;
     display: flex;
     align-items: center;
@@ -1522,6 +1526,291 @@ footer p {
 }
 
 .back-to-top:hover {
-    background: #FEC340;
+    background: var(--color-yellow);
     transform: translateY(-0.3125rem); /* -5px */
+}
+
+/* АДАПТАЦИЯ */
+/* --- Большие экраны (1281px - 1600px) --- */
+@media (max-width: 1600px) {
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    h4{
+        font-size: 1.5rem;
+    }
+    p, button, span, .option-btn, .next-btn, .restart-btn, li{
+        font-size: 1.2rem;
+    }
+    :root {
+	--card-height: 45vw;
+    }
+}
+
+/* --- Небольшие ноутбуки (1025px - 1280px) --- */
+@media (max-width: 1280px) {
+    h1{
+        font-size: 4.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.25rem;
+    }
+    p, button, span, .option-btn, .next-btn, .restart-btn, li{
+        font-size: 1.1rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+    :root {
+	--card-height: 50vw;
+    }
+}
+
+/* --- Планшеты (768px - 1024px) --- */
+@media (max-width: 1024px) {
+    body{
+        background-image: url('media/fon/А4_вертикальные-01.webp');
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.25rem;
+    }
+    h4{
+        font-size: 1rem;
+    }
+    p, button, span, .option-btn, .next-btn, .restart-btn, li{
+        font-size: 0.8rem;
+    }
+    a{
+        font-size: 0.8rem;
+    }
+    :root {
+	--card-height: 60vw;
+    }
+    .hero-button a {
+        width: 10rem;
+    }
+    .back-to-top{
+    bottom: 3vw; /* 30px */
+    right: 3vw; /* 30px */
+    }
+    .point-label {
+        transform: none;
+    }
+    .map-point:nth-child(odd) .point-label {
+        transform: none;
+    }
+    .timeline-image {
+    width: 15rem;
+    }
+    .card_text
+    .card_text p,
+    .card_text h3,
+    .card_text h4{
+        margin: 0.5rem;
+    }
+    .card_text a {
+        margin-right: 1rem;
+    }
+    .card_text a img {
+        width: 3rem;
+    }
+    .card__content figure img {
+    max-width: 120%;
+    max-height: 120%;
+    }
+}
+
+/* --- Малые мобильные (481px - 767px) --- */
+@media (max-width: 768px) {
+    h1{
+        margin-top: 20vw;
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    h4{
+        font-size: 0.7rem;
+    }
+        p, button, span, .option-btn, .next-btn, .restart-btn, li{
+        font-size: 0.6rem;
+    }
+    a{
+        font-size: 0.6rem;
+    }
+    section{
+        min-height: fit-content;
+    }
+    :root {
+	--card-height: 60vw;
+    }
+    .leaf{
+        width: 2rem;                /* 100px */
+        height: 2rem;
+    }
+    .logo-hero{
+        width: 70vw;
+    }
+    .card__content{
+        padding: 0.5rem;
+    }
+    .card_text,
+    .card_text p,
+    .card_text h3,
+    .card_text h4{
+        margin: 0.1rem;
+        font-size: xx-small;
+    }
+    .timeline-image {
+        width: 10rem;
+    }
+    .card_text a img {
+        width: 1.5rem;
+    }
+    .back-to-top{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* --- Мобильные устройства до 480px --- */
+@media (max-width: 480px) {
+    body{
+        background-image: url('media/fon/а4_вертик_тел-01.webp');
+    }
+    h1{
+        margin-top: 20vw;
+        font-size: 1.8rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.7rem;
+    }
+    h4{
+        font-size: 0.6rem;
+    }
+    p, button, span, .option-btn, .next-btn, .restart-btn, li{
+        font-size: 0.5rem;
+    }
+    a{
+        font-size: 0.5rem;
+    }
+    .sources-grid {
+    row-gap: 3rem;
+    column-gap: 0.25rem;
+    }
+    .card__content{
+        height: 100vw;
+    }
+    .leaf{
+        width: 0;
+        height: 0;
+    }
+    .graph {
+    padding: 1rem 0; /* 40px 0 */
+    }
+    .timeline-image {
+        width: 8rem;
+    }
+    :root{
+        --card-height: 90vw;
+    }
+    .card__content figure img {
+        max-width: 150%;
+        max-height: 150%;
+    }
+}
+
+/* Отключаем hover-эффекты для тач-устройств */
+@media (hover: none) and (pointer: coarse) {
+    .hero-button a:hover {
+    background-color: var(--color-red); /* Возвращаем исходный цвет */
+    }
+
+    .map-point:hover .map-icon {
+    transform: none;
+    box-shadow: none;
+    }
+
+    .map-point:hover .point-label {
+    background-color: white;
+    color: #333;
+    transform: none;
+    border-color: transparent;
+    }
+
+    .map-point:nth-child(odd):hover .point-label {
+    transform: none;
+    }
+
+    .card_text a:hover img {
+    transform: none;
+    }
+
+    .option-btn:hover:not(:disabled) {
+    background: white;
+    transform: none;
+    }
+
+    .next-btn:hover:not(:disabled),
+    .restart-btn:hover {
+    background: var(--color-red);
+    }
+
+    .source-card:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .back-to-top:hover {
+    background: var(--color-red);
+    transform: none;
+    }
+
+    .modal-close:hover {
+    color: #777;
+    }
+
+    .btn--herbarium:hover {
+    background-color: #2e7d32;
+    }
+
+    .timeline-content:hover {
+    transform: none;
+    }
+
+    .source-card:hover h3 {
+        color: var(--color-biruze);
+    }
+
+    .source-card a:hover{
+        text-decoration: none;
+    }
+
+    .developer-credit a:hover {
+        color: var(--color-red);
+    }
 }
