@@ -164,10 +164,12 @@ const cardsData = {
       fullDescription: "Многолетнее травянистое растение семейства Астровые (Asteraceae), высотой от 20 до 80 см. Цветение длится с июня по сентябрь. Обладает характерным пряным запахом и белыми или розоватыми соцветиями-щитками.",
       sketchfabEmbed: `<div class="sketchfab-embed-wrapper"> 
       <iframe title="Тысячелистник обыкновенный (A. millefolium)" 
-      frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" 
-      allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport 
+      frameborder="0" allowfullscreen mozallowfullscreen="true" 
+      webkitallowfullscreen="true" allow="autoplay; fullscreen; 
+      xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport 
       execution-while-not-rendered web-share 
-      src="https://sketchfab.com/models/936cb3b3fef7422ea563c62b7e8e6248/embed?autospin=1&autostart=1&dnt=1"> </iframe> </div>`,
+      src="https://sketchfab.com/models/936cb3b3fef7422ea563c62b7e8e6248/embed?autospin=1&autostart=1&dnt=1">
+      </iframe> </div>`,
       herbariumLink: "https://elib.bgsha.ru/hbr/00001",
       habitat: "Произрастает по всей территории Евразии, от Европы до Восточной Сибири, включая Бурятию. Встречается на лугах, в степях, по обочинам дорог, на опушках лесов и склонах холмов.",
       properties: ["Противовоспалительное", "Кровоостанавливающее", "Антисептическое", "Улучшает пищеварение", "Укрепляет иммунитет"],
