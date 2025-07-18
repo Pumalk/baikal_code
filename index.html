@@ -1,6 +1,448 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Погрузитесь в мир целебных растений Байкала! Научные факты, цифровая интерактивность, редкие виды и старт для будущих учёных и экологов. Проект реализован Научной библиотекой Бурятской ГСХА."><meta name="keywords" content="Байкал, лекарственные растения, флора, экология, наука, БГСХА, цифровой проект, редкие растения, ботаника, природа, для школьников"><title>Природный код Байкала</title><link rel="preload" href="media/photo/back.webp" as="image" fetchpriority="high"><link rel="icon" href="media/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="media/favicons/favicon-16x16.webp" sizes="16x16"><link rel="icon" href="media/favicons/favicon-32x32.webp" sizes="32x32"><link rel="icon" href="media/favicons/android-chrome-192x192.webp" sizes="192x192"><link rel="apple-touch-icon" href="media/favicons/apple-touch-icon.webp"><link rel="manifest" href="media/favicons/site.webmanifest"><link rel="stylesheet" href="styles.css"><meta property="og:title" content="Природный код Байкала"><meta property="og:description" content="Интерактивный проект о лекарственных растениях Байкала: наука, природа, цифровые факты и редкие виды."><meta property="og:image" content="https://elib.bgsha.ru/baikal-code/media/photo/open-graph.webp"><meta property="og:type" content="website"><meta property="og:url" content="https://elib.bgsha.ru/baikal-code/index.html"></head><body><section id="hero" class="hero"><div class="logo-hero"><a href="https://bgsha.ru/"><img src="media/photo/лого_БГСХА.svg" alt="🌿 Бурятская ГСХА"></a></div><div class="hero-text"><h1>ПРИРОДНЫЙ КОД БАЙКАЛА</h1><h2>ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ В ЦИФРАХ И ФАКТАХ</h2></div><div class="hero-button"><a href="#about">НАЧАТЬ ПУТЕШЕСТВИЕ</a></div></section><section id="about"><img src="media/photo/1.1.webp" alt="" loading="lazy"><h2>Путь начинается здесь</h2><h3 class="about-intro">О проекте</h3><p class="about-text">Погрузитесь в мир целебных растений Байкала — редких, удивительных, живых! Проект открывает тайны флоры, сочетая науку, природу и цифровую интерактивность. Это не просто сайт — это старт для будущих учёных, экологов и знатоков зелёной аптеки.</p><p class="about-text2">Проект реализован Научной библиотекой Бурятской ГСХА.</p><img src="media/photo/1.2.webp" alt="" loading="lazy"></section><section class="map" id="map"><h2>Карта путешествия</h2><div class="map-container"><div class="map-line"></div><div class="map-points"><div class="map-point"><div class="map-icon map-icon--about"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg></div><a href="#about" class="point-label">Путь начинается здесь</a></div><div class="map-point"><div class="map-icon map-icon--history"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 11H11V7h1.5v4.25L16 12l-3.5 2.25V13z"/></svg></div><a href="#history" class="point-label">Древо знаний</a></div><div class="map-point"><div class="map-icon map-icon--graph"><svg viewBox="0 0 24 24"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM9 9H7v7h2V9zm2 3h2v4h-2v-4zm2-3h2v7h-2V9z"/></svg></div><a href="#graph" class="point-label">Байкал в цифрах</a></div><div class="map-point"><div class="map-icon map-icon--gallery"><svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg></div><a href="#gallery" class="point-label">Тайны природы</a></div><div class="map-point"><div class="map-icon map-icon--agroclass"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg></div><a href="#sectionPin" class="point-label">Агроклассы</a></div><div class="map-point"><div class="map-icon map-icon--victorina"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Погрузитесь в мир целебных растений Байкала! Научные факты, цифровая интерактивность, редкие виды и старт для будущих учёных и экологов. Проект реализован Научной библиотекой Бурятской ГСХА."><!-- Краткое описание сайта для поисковых систем и соцсетей -->
+    <meta name="keywords" content="Байкал, лекарственные растения, флора, экология, наука, БГСХА, цифровой проект, редкие растения, ботаника, природа, для школьников"><!-- Ключевые слова для SEO (поисковая оптимизация) -->
+    <title>Природный код Байкала</title>
+    <link rel="preload" href="media/photo/back.webp" as="image" fetchpriority="high">
+    <link rel="icon" href="media/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="media/favicons/favicon-16x16.webp" sizes="16x16">
+    <link rel="icon" href="media/favicons/favicon-32x32.webp" sizes="32x32">
+    <link rel="icon" href="media/favicons/android-chrome-192x192.webp" sizes="192x192">
+    <link rel="apple-touch-icon" href="media/favicons/apple-touch-icon.webp">
+    <link rel="manifest" href="media/favicons/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Open Graph для соцсетей -->
+    <meta property="og:title" content="Природный код Байкала">
+    <meta property="og:description" content="Интерактивный проект о лекарственных растениях Байкала: наука, природа, цифровые факты и редкие виды.">
+    <meta property="og:image" content="https://elib.bgsha.ru/baikal-code/media/photo/open-graph.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elib.bgsha.ru/baikal-code/index.html">
+</head>
+<body>
+
+    <section id="hero" class="hero">
+    <div class="logo-hero">
+        <a href="https://bgsha.ru/">
+            <img src="media/photo/лого_БГСХА.svg" alt="🌿 Бурятская ГСХА">
+        </a>
+    </div>
+    <div class="hero-text">
+        <h1>ПРИРОДНЫЙ КОД БАЙКАЛА</h1>
+        <h2>ЛЕКАРСТВЕННЫЕ РАСТЕНИЯ В ЦИФРАХ И ФАКТАХ</h2>
+    </div>
+    <div class="hero-button">
+        <a href="#about">НАЧАТЬ ПУТЕШЕСТВИЕ</a>
+    </div>
+    </section>
+
+
+    <section id="about">
+        <img src="media/photo/1.1.webp" alt="" loading="lazy">
+        <h2>Путь начинается здесь</h2>
+        <h3 class="about-intro">О проекте</h3>
+        <p class="about-text">
+        Погрузитесь в мир целебных растений Байкала — редких, удивительных, живых! 
+        Проект открывает тайны флоры, сочетая науку, природу и цифровую интерактивность. 
+        Это не просто сайт — это старт для будущих учёных, экологов и знатоков зелёной аптеки. 
+        </p>
+        <p class="about-text2">Проект реализован Научной библиотекой Бурятской ГСХА.</p>
+        <img src="media/photo/1.2.webp" alt="" loading="lazy">
+    </section>
+
+
+    <section class="map" id="map">
+        <h2>Карта путешествия</h2>
+    <div class="map-container">
+        <div class="map-line"></div>
+        <div class="map-points">
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--about">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </div>
+        <a href="#about" class="point-label">Путь начинается здесь</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--history">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 11H11V7h1.5v4.25L16 12l-3.5 2.25V13z"/></svg>
+        </div>
+        <a href="#history" class="point-label">Древо знаний</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--graph">
+            <svg viewBox="0 0 24 24"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM9 9H7v7h2V9zm2 3h2v4h-2v-4zm2-3h2v7h-2V9z"/></svg>
+        </div>
+        <a href="#graph" class="point-label">Байкал в цифрах</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--gallery">
+            <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        </div>
+        <a href="#gallery" class="point-label">Тайны природы</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--agroclass">
+            <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+        </div>
+        <a href="#sectionPin" class="point-label">Агроклассы</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--victorina">
+            <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10
                     10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm1.07-7.75
                     c-.9.92-1.07 1.25-1.07 2.25h-2v-.5c0-1.1.45-2.1
                     1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41
                     0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4
-                    4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg></div><a href="#victorina" class="point-label">Проверь свои знания!</a></div><div class="map-point"><div class="map-icon map-icon--link"><svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg></div><a href="#sources" class="point-label">Источники и полезные ссылки</a></div></div></div></section><section class="history" id="history"><h2>Древо знаний</h2><h3 class="history-podz">История изучения лекарственных растений Бурятии</h3><div class="history-timeline"><div class="timeline-line"><div class="timeline-start"><img src="media/photo/таймлайн/ягодки.webp" alt="Ягода" class="berry" loading="lazy"></div></div><div class="timeline-item"><div class="timeline-row"><div class="timeline-content left"><div class="timeline-marker"><img src="media/photo/таймлайн/листочек слева.webp" alt="Лист" class="leaf" loading="lazy"></div><h3>до XVI</h3><p>Эпоха традиций и устного наследия. Знания о целебных травах передаются устно в кланах, родах и семьях. Активно используется бурятская народная медицина, шаманские практики.</p></div><div class="timeline-image-block2"><img src="media/photo/таймлайн/shaman.webp" alt="Шаман" class="timeline-image" loading="lazy"></div></div><div class="timeline-item"><div class="timeline-row"><div class="timeline-image-block"><img src="media/photo/таймлайн/чжуд-ши.webp" alt="Чжуд-ши" class="timeline-image" loading="lazy"></div><div class="timeline-content right"><div class="timeline-marker"><img src="media/photo/таймлайн/листочек справа.webp" alt="Лист" class="leaf" loading="lazy"></div><h3>XVII</h3><p>Начало активного проникновения в Бурятию тибетской медицины, особенно с распространением буддизма тибетского толка (ламаизма). Этот процесс усилился после официального признания буддизма как одной из традиционных религий Российской империи в 1741 году. В это время формируются дацаны (буддийские монастыри), при которых появляются медицинские школы, изучающие трактаты тибетской медицины, такие как "Чжуд-ши".</p></div></div></div><div class="timeline-item"><div class="timeline-row"><div class="timeline-content left"><div class="timeline-marker"><img src="media/photo/таймлайн/листочек слева.webp" alt="Лист" class="leaf" loading="lazy"></div><h3>XVIII</h3><p style="font-style:italic">первые описания и систематизация</p><ul><li>Появляются первые этнографические сведения о растениях Сибири от русских первопроходцев.</li><li>1770-е — экспедиции Иоганна Георга Гмелина, учёный-энциклопедист и великолепный художник, автор многотомного труда «Флора Сибири», экспедиции Петра Симона Палласа, академика, описавшего флору Забайкалья.</li></ul></div><div class="timeline-image-block"><img src="media/photo/таймлайн/gmelin.webp" alt="Гмелин" class="timeline-image" loading="lazy"><div class="timeline-image-caption"><p>Иоганн Георг Гмелин (1709 - 1755)</p></div></div></div><div class="timeline-item"><div class="timeline-row"><div class="timeline-image-block"><img src="media/photo/таймлайн/pallas.webp" alt="Паллас" class="timeline-image" loading="lazy"><div class="timeline-image-caption"><p>Петр Симон Паллас (1741 - 1811)</p></div></div><div class="timeline-content right"><div class="timeline-marker"><img src="media/photo/таймлайн/листочек справа.webp" alt="Лист" class="leaf" loading="lazy"></div><h3>XIX</h3><p style="font-style:italic">научный интерес и ботаническая картография</p><ul><li>Различные экспедиции;</li><li>Работа с гербариями, создание первых травников с научным описанием.</li></ul></div></div><div class="timeline-text"><p>Во второй половине 19 века Потанин Г., будучи в Бурятии, записал названия ряда лекарственных растений, применяемых бурятами.</p><p>Турчанинов Н.В., изучая флору Забайкалья, сам лично собрал 1370 различных растений, причем большее внимание он уделял лекарственным растениям, произрастающим в Бурят-Монголии.</p><p>Кириллов Н., работая в Бурят-Монголии в качестве врача, изучил большое количество лекарственных растений и собрал материал по народной медицине.</p><p>Палибин Н.В., путешествуя по Бурят-Монголии и Монголии, в 1899 г. собрал, частично скупил и обработал большой гербарий лекарственных растений; он впервые сообщил о заготовке и использовании солодки в Кяхтинском и Джидинском аймаках и Северной Монголии. Стуков Г. Посвятил свои работы изучению лекарственного растительного сырья и народным способам лечения людей и животных.</p></div></div></section><section class="graph" id="graph"><h2>Байкал в цифрах</h2><h3>Уникальная природа Байкальского региона в значимых показателях.</h3><div class="stats"><div class="stat-item"><div class="stat-icon"><img src="media/photo/инфорграфика/поле растений.webp" alt="Растения" loading="lazy"></div><div class="stat-content"><div class="stat-number count-animate" data-to="520">520</div><div class="stat-label"><p>видов лекарственных растений в регионе</p></div></div></div><div class="stat-item"><div class="stat-icon"><img src="media/photo/инфорграфика/красная книга.webp" alt="Красная книга" loading="lazy"></div><div class="stat-content"><div class="stat-number count-animate" data-to="156">156</div><div class="stat-label"><p>занесены в Красную книгу</p></div></div></div><div class="stat-item"><div class="stat-icon"><img src="media/photo/инфорграфика/растение в медицине.webp" alt="Растение" loading="lazy"></div><div class="stat-content"><div class="stat-number count-animate" data-to="33">33</div><div class="stat-label"><p>активно применяются в современной медицине</p></div></div></div><div class="stat-item"><div class="stat-icon"><img src="media/photo/инфорграфика/растени-аромки.webp" alt="Растение" loading="lazy"></div><div class="stat-content"><div class="stat-text"><p>Используются в:</p></div><div class="stat-tags"><span class="tag stat-tag">лекарствах</span><span class="tag stat-tag">БАДах</span><span class="tag stat-tag">косметике</span><span class="tag stat-tag">ароматерапии</span></div></div></div></div><div class="graph-footer"><p>Эти данные основаны на исследованиях Ботанического сада БГСХА и многолетних наблюдениях за флорой Байкальского региона.</p></div></section><section class="gallery" id="gallery"><h2>Тайны природы</h2><ul id="cards"></ul></section><section id="sectionPin" class="agroclasses"><div class="pin-wrap-sticky"><div class="pin-wrap"><div class="agro-block agro-text"><h3>Агроклассы — путь в аграрные профессии</h3><p>Бурятская государственная сельскохозяйственная академия имени В.Р. Филиппова ведет активную работу со школьниками республики. В агроклассах ученики знакомятся с основами сельского хозяйства, экологии и биотехнологий.</p><p>Участники агроклассов принимают участие в научных экспедициях, где изучают лекарственные растения Бурятии, их свойства и способы сохранения биоразнообразия.</p><p>Программа агроклассов включает практические занятия, мастер-классы от ведущих ученых академии и знакомство с современными аграрными профессиями.</p></div><div class="agro-block agro-photo"><img src="media/photo/агроклассы/Агроклассы1.webp" alt="Агроклассы - фото 1" loading="lazy"></div><div class="agro-block agro-photo"><img src="media/photo/агроклассы/Агроклассы2.webp" alt="Агроклассы - фото 2" loading="lazy"></div><div class="agro-block agro-photo"><img src="media/photo/агроклассы/Агроклассы3.webp" alt="Агроклассы - фото 3" loading="lazy"></div><div class="agro-block agro-photo"><img src="media/photo/агроклассы/Агроклассы4.webp" alt="Агроклассы - фото 4" loading="lazy"></div></div></div></section><section class="victorina" id="victorina"><h2>Проверь свои знания!</h2><div class="victorina-container"><div class="progress">Вопрос<span id="current-question">1</span>из 10</div><div class="question-card"><h3 class="question-text"></h3><div class="options-container"></div><p class="hint-text"></p><button class="next-btn" disabled="disabled">Далее</button></div></div></section><section id="sources" class="sources"><h2>Источники и полезные ссылки</h2><div class="sources-grid"><div class="source-card"><div class="source-card-content"><div class="source-icon"><img src="media/icons in body/академия1.webp" alt="БГСХА" loading="lazy"></div><h3>Официальный сайт БГСХА</h3><p>Вся информация о академии, факультетах и программах обучения</p><a href="https://bgsha.ru" target="_blank">Подробнее</a></div></div><div class="source-card"><div class="source-card-content"><div class="source-icon"><img src="media/icons in body/учеба1.webp" alt="Агроклассы" loading="lazy"></div><h3>Агроклассы БГСХА</h3><p>Программа для школьников по изучению сельского хозяйства</p><a href="https://abiturient.bgsha.ru/dovuz/agroclass/" target="_blank">Подробнее</a></div></div><div class="source-card"><div class="source-card-content"><div class="source-icon"><img src="media/icons in body/абитуриент1.webp" alt="Приемная комиссия" loading="lazy"></div><h3>Приемная комиссия БГСХА</h3><p>Сайт абитуриента Бурятской ГСХА предоставляет полную информацию о поступлении, экзаменах, конкурсах и учебной жизни в академии.</p><a href="https://abiturient.bgsha.ru/" target="_blank">Подробнее</a></div></div><div class="source-card"><div class="source-card-content"><div class="source-icon"><img src="media/icons in body/книга_библиотека1.webp" alt="Травник" loading="lazy"></div><h3>Травник: 108 целебных растений Байкала</h3><p>Справочник по лекарственным травам Байкальского региона</p><a href="https://elib.bgsha.ru/index.php?option=com_irbis&view=irbis&Itemid=423&task=set_static_req&bl_id_string=1,3,4,5,6,7,9,10,12,13,14,15,16,17,24&req_irb=<.>I=633%2E8%28571%2E54%29%2F%D0%A2%2065%2D912088695<.>" target="_blank">Подробнее</a></div></div><div class="source-card"><div class="source-card-content"><div class="source-icon"><img src="media/icons in body/исследования1.webp" alt="Цифровой гербарий" loading="lazy"></div><h3>Цифровой гербарий БГСХА</h3><p>Это онлайн-база с описаниями, изображениями, 3D-моделями и данными о применении лекарственных растений, интегрированная с библиотекой Бурятской ГСХА.</p><a href="https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549" target="_blank">Подробнее</a></div></div></div></section><footer><div><a href="https://bgsha.ru/"><img class="footer-logo" src="media/photo/лого_БГСХА.svg" alt="🌿 Бурятская ГСХА" loading="lazy"></a></div><div class="address"><p>Адрес:</p><p>670010, Россия, Республика Бурятия, г. Улан-Удэ, ул. Пушкина, 8</p></div><div class="call"><img src="media/icons in footer/навигация-звонок.webp" alt="Телефоны" loading="lazy"><div class="call-text"><p>Тел.:<a href="tel:83012442611">8 (3012) 44-26-11</a></p><p>Факс:<a href="tel:83012442611">8 (3012) 44-21-33</a></p></div></div><div class="press"><div class="press-2"><p>library@bgsha.ru</p><p>Пресс-служба: press-bgsha@mail.ru</p></div></div><div class="social-link"><a href="https://t.me/bgsha_official"><img src="media/icons in footer/навигация-тг.webp" alt="Telegram" loading="lazy"></a><a href="https://vk.com/bgsha_official"><img src="media/icons in footer/навигация-вк.webp" alt="VK" loading="lazy"></a><a href="https://ok.ru/bgsha.official"><img src="media/icons in footer/навигация-ок.webp" alt="OK" loading="lazy"></a></div><div class="copyright"><p>© БГСХА, 2025</p><div class="developer-credit"><a href="https://github.com/Pumalk" target="_blank" rel="noopener">🛠️: Лебедев Кирилл</a></div></div></footer><a class="back-to-top" id="backToTop" href="#hero"><svg width="24" height="24" fill="white"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg></a><script type="module" src="scripts/main.js"></script><script src="scripts/victorina.js" defer="defer"></script></body></html>
+                    4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+        </svg>
+        </div>
+        <a href="#victorina" class="point-label">Проверь свои знания!</a>
+    </div>
+    
+    <div class="map-point">
+        <div class="map-icon map-icon--link">
+            <svg viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+        </div>
+        <a href="#sources" class="point-label">Источники и полезные ссылки</a>
+    </div>
+</div>
+    </div>
+    </section>
+
+
+    <section class="history" id="history">
+    <h2>Древо знаний</h2>
+    <h3 class="history-podz">История изучения лекарственных растений Бурятии</h3>
+    <div class="history-timeline">
+        <div class="timeline-line">
+            <div class="timeline-start">
+                <img src="media/photo/таймлайн/ягодки.webp" alt="Ягода" class="berry" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-row">
+                <div class="timeline-content left">
+                    <div class="timeline-marker">
+                        <img src="media/photo/таймлайн/листочек слева.webp" alt="Лист" class="leaf" loading="lazy">
+                    </div>
+                <h3>до XVI</h3>
+                <p>
+                    Эпоха традиций и устного наследия. Знания о целебных травах передаются устно в кланах, родах и семьях.
+                    Активно используется бурятская народная медицина, шаманские практики.
+                </p>
+            </div>
+            <div class="timeline-image-block2">
+                <img src="media/photo/таймлайн/shaman.webp" alt="Шаман" class="timeline-image" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-row">
+                <div class="timeline-image-block">
+                    <img src="media/photo/таймлайн/чжуд-ши.webp" alt="Чжуд-ши" class="timeline-image" loading="lazy">
+                </div>
+                <div class="timeline-content right">
+                    <div class="timeline-marker">
+                        <img src="media/photo/таймлайн/листочек справа.webp" alt="Лист" class="leaf" loading="lazy">
+                    </div>
+                    <h3>XVII</h3>
+                    <p>
+                        Начало активного проникновения в Бурятию тибетской медицины, особенно с распространением буддизма тибетского толка (ламаизма).
+                        Этот процесс усилился после официального признания буддизма как одной из традиционных религий Российской империи в 1741 году.
+                        В это время формируются дацаны (буддийские монастыри), при которых появляются медицинские школы, изучающие трактаты тибетской медицины,
+                            такие как "Чжуд-ши".
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="timeline-row">
+            <div class="timeline-content left">
+                <div class="timeline-marker">
+                    <img src="media/photo/таймлайн/листочек слева.webp" alt="Лист" class="leaf" loading="lazy">
+                </div>
+                <h3>XVIII</h3>
+                <p style="font-style: italic;">
+                    первые описания и систематизация
+                </p>
+                <ul>
+                    <li>
+                        Появляются первые этнографические сведения о растениях Сибири от русских первопроходцев.
+                    </li>
+                    <li>
+                        1770-е — экспедиции Иоганна Георга Гмелина, 
+                        учёный-энциклопедист и великолепный художник, автор многотомного труда «Флора Сибири», 
+                        экспедиции Петра Симона Палласа, академика, описавшего флору Забайкалья.
+                    </li>
+                </ul>
+                </div>
+            <div class="timeline-image-block">
+                <img src="media/photo/таймлайн/gmelin.webp" alt="Гмелин" class="timeline-image" loading="lazy">
+                <div class="timeline-image-caption"><p>Иоганн Георг Гмелин (1709 - 1755)</p></div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-row">
+                <div class="timeline-image-block">
+                    <img src="media/photo/таймлайн/pallas.webp" alt="Паллас" class="timeline-image" loading="lazy">
+                    <div class="timeline-image-caption"><p>Петр Симон Паллас (1741 - 1811)</p></div>
+                </div>
+            <div class="timeline-content right">
+                <div class="timeline-marker">
+                    <img src="media/photo/таймлайн/листочек справа.webp" alt="Лист" class="leaf" loading="lazy">
+                </div>
+                <h3>XIX</h3>
+                <p style="font-style: italic;">
+                    научный интерес и ботаническая картография
+                </p>
+                <ul>
+                    <li>
+                        Различные экспедиции;
+                    </li>
+                    <li>
+                        Работа с гербариями, создание первых травников с научным описанием.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="timeline-text">
+                <p>
+                    Во второй половине 19 века Потанин Г., будучи в Бурятии, записал названия ряда лекарственных растений, применяемых бурятами. 
+                </p>
+                <p>
+                    Турчанинов Н.В., изучая флору Забайкалья, сам лично собрал 1370 различных растений, причем большее внимание он уделял лекарственным растениям, произрастающим в Бурят-Монголии.
+                </p>
+                <p>
+                    Кириллов Н., работая в Бурят-Монголии в качестве врача, изучил большое количество лекарственных растений и собрал материал по народной медицине. 
+                </p>
+                <p>
+                    Палибин Н.В., путешествуя по Бурят-Монголии и Монголии, в 1899 г. собрал, частично скупил и обработал большой гербарий лекарственных растений; он впервые сообщил о заготовке и использовании солодки в Кяхтинском и Джидинском аймаках и Северной Монголии. Стуков Г. Посвятил свои работы изучению лекарственного растительного сырья и народным способам лечения людей и животных.
+                </p>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="graph" id="graph">
+    <h2>Байкал в цифрах</h2>
+    <h3>Уникальная природа Байкальского региона в значимых показателях.</h3>
+    
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/инфорграфика/поле растений.webp" alt="Растения" loading="lazy"></div>
+            <div class="stat-content">
+                <div class="stat-number count-animate" data-to="520">520</div>
+                <div class="stat-label"><p>видов лекарственных растений в регионе</p></div>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/инфорграфика/красная книга.webp" alt="Красная книга" loading="lazy"></div>
+            <div class="stat-content">
+                <div class="stat-number count-animate" data-to="156">156</div>
+                <div class="stat-label"><p>занесены в Красную книгу</p></div>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/инфорграфика/растение в медицине.webp" alt="Растение" loading="lazy"></div>
+            <div class="stat-content">
+                <div class="stat-number count-animate" data-to="33">33</div>
+                <div class="stat-label"><p>активно применяются в современной медицине</p></div>
+            </div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="stat-icon"><img src="media/photo/инфорграфика/растени-аромки.webp" alt="Растение" loading="lazy"></div>
+            <div class="stat-content">
+                <div class="stat-text"><p>Используются в:</p></div>
+                <div class="stat-tags">
+                    <span class="tag stat-tag">лекарствах</span>
+                    <span class="tag stat-tag">БАДах</span>
+                    <span class="tag stat-tag">косметике</span>
+                    <span class="tag stat-tag">ароматерапии</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="graph-footer">
+        <p>Эти данные основаны на исследованиях Ботанического сада БГСХА и многолетних наблюдениях за флорой Байкальского региона.</p>
+    </div>
+    </section>
+
+
+    <section class="gallery" id="gallery">
+        <h2>Тайны природы</h2>
+        <ul id="cards">
+		</ul>
+    </section>
+
+
+    <section id="sectionPin" class="agroclasses">
+    <div class="pin-wrap-sticky">
+        <div class="pin-wrap">
+            <div class="agro-block agro-text">
+                <h3>Агроклассы — путь в аграрные профессии</h3>
+                <p>Бурятская государственная сельскохозяйственная академия имени В.Р. Филиппова ведет активную работу со школьниками республики. В агроклассах ученики знакомятся с основами сельского хозяйства, экологии и биотехнологий.</p>
+                <p>Участники агроклассов принимают участие в научных экспедициях, где изучают лекарственные растения Бурятии, их свойства и способы сохранения биоразнообразия.</p>
+                <p>Программа агроклассов включает практические занятия, мастер-классы от ведущих ученых академии и знакомство с современными аграрными профессиями.</p>
+            </div>
+            
+            <div class="agro-block agro-photo">
+                <img src="media/photo/агроклассы/Агроклассы1.webp" alt="Агроклассы - фото 1" loading="lazy">
+            </div>
+            
+            <div class="agro-block agro-photo">
+                <img src="media/photo/агроклассы/Агроклассы2.webp" alt="Агроклассы - фото 2" loading="lazy">
+            </div>
+            
+            <div class="agro-block agro-photo">
+                <img src="media/photo/агроклассы/Агроклассы3.webp" alt="Агроклассы - фото 3" loading="lazy">
+            </div>
+            
+            <div class="agro-block agro-photo">
+                <img src="media/photo/агроклассы/Агроклассы4.webp" alt="Агроклассы - фото 4" loading="lazy">
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <section class="victorina" id="victorina">
+        <h2>Проверь свои знания!</h2>
+        <div class="victorina-container">
+            <div class="progress">Вопрос <span id="current-question">1</span> из 10</div>
+            <div class="question-card">
+                <h3 class="question-text"></h3>
+                <div class="options-container"></div>
+                <p class="hint-text"></p>
+                <button class="next-btn" disabled>Далее</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="sources" class="sources">
+    <h2>Источники и полезные ссылки</h2>
+    <div class="sources-grid">
+        
+        <div class="source-card">
+            <div class="source-card-content">
+                <div class="source-icon">
+                    <img src="media/icons in body/академия1.webp" alt="БГСХА" loading="lazy">
+                </div>
+                <h3>Официальный сайт БГСХА</h3>
+                <p>Вся информация о академии, факультетах и программах обучения</p>
+                <a href="https://bgsha.ru" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <div class="source-card-content">
+                <div class="source-icon">
+                    <img src="media/icons in body/учеба1.webp" alt="Агроклассы" loading="lazy">
+                </div>
+                <h3>Агроклассы БГСХА</h3>
+                <p>Программа для школьников по изучению сельского хозяйства</p>
+                <a href="https://abiturient.bgsha.ru/dovuz/agroclass/" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <div class="source-card-content">
+                <div class="source-icon">
+                    <img src="media/icons in body/абитуриент1.webp" alt="Приемная комиссия" loading="lazy">
+                </div>
+                <h3>Приемная комиссия БГСХА</h3>
+                <p>Сайт абитуриента Бурятской ГСХА предоставляет полную информацию о поступлении, экзаменах, конкурсах и учебной жизни в академии.</p>
+                <a href="https://abiturient.bgsha.ru/" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <div class="source-card-content">
+                <div class="source-icon">
+                    <img src="media/icons in body/книга_библиотека1.webp" alt="Травник" loading="lazy">
+                </div>
+                <h3>Травник: 108 целебных растений Байкала</h3>
+                <p>Справочник по лекарственным травам Байкальского региона</p>
+                <a href="https://elib.bgsha.ru/index.php?option=com_irbis&view=irbis&Itemid=423&task=set_static_req&bl_id_string=1,3,4,5,6,7,9,10,12,13,14,15,16,17,24&req_irb=<.>I=633%2E8%28571%2E54%29%2F%D0%A2%2065%2D912088695<.>" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+        <div class="source-card">
+            <div class="source-card-content">
+                <div class="source-icon">
+                    <img src="media/icons in body/исследования1.webp" alt="Цифровой гербарий" loading="lazy">
+                </div>
+                <h3>Цифровой гербарий БГСХА</h3>
+                <p>Это онлайн-база с описаниями, изображениями, 3D-моделями и данными о применении лекарственных растений, 
+                    интегрированная с библиотекой Бурятской ГСХА.</p>
+                <a href="https://elib.bgsha.ru/index.php?option=com_content&view=article&id=12&Itemid=549" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+    </div>
+
+    </section>
+
+
+    <footer>
+    <div>
+        <a href="https://bgsha.ru/">
+            <img class="footer-logo" src="media/photo/лого_БГСХА.svg" alt="🌿 Бурятская ГСХА" loading="lazy">
+        </a>
+    </div>
+    <div class="address">
+        <p>Адрес: </p>
+        <p>670010, Россия, Республика Бурятия, г. Улан-Удэ, ул. Пушкина, 8</p>
+    </div>
+    <div class="call">
+        <img src="media/icons in footer/навигация-звонок.webp" alt="Телефоны" loading="lazy">
+        <div class="call-text">
+            <p>Тел.:<a href="tel:83012442611">8 (3012) 44-26-11</a></p>
+            <p>Факс:<a href="tel:83012442611">8 (3012) 44-21-33</a></p>
+        </div>
+    </div>
+    <div class="press">
+        <div class="press-2">
+            <p>library@bgsha.ru</p>
+            <p>Пресс-служба: press-bgsha@mail.ru</p>
+        </div>
+    </div>
+    <div class="social-link">
+        <a href="https://t.me/bgsha_official"><img src="media/icons in footer/навигация-тг.webp" alt="Telegram" loading="lazy"></a>
+        <a href="https://vk.com/bgsha_official"><img src="media/icons in footer/навигация-вк.webp" alt="VK" loading="lazy"></a>
+        <a href="https://ok.ru/bgsha.official"><img src="media/icons in footer/навигация-ок.webp" alt="OK" loading="lazy"></a>
+    </div>
+    <div class="copyright">
+        <p>© БГСХА, 2025</p>
+        <div class="developer-credit">
+            <a href="https://github.com/Pumalk" target="_blank" rel="noopener">🛠️: Лебедев Кирилл</a>
+        </div>
+    </div>
+</footer>
+
+    <a class="back-to-top" id="backToTop" href="#hero">
+        <svg width="24" height="24" fill="white"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+    </a>
+
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/victorina.js" defer></script>
+</body>
+<!-- https://github.com/Pumalk -->
+</html>
