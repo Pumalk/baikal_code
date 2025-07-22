@@ -217,12 +217,12 @@ function createCard(cardData, container) {
                         <h3>Факты и цифры</h3>
                         <div class="facts-grid">
                             <div class="fact-item">
-                                <div class="fact-value">${cardData.modalContent.facts.height}</div>
-                                <div class="fact-label">Высота растения</div>
+                                <div class="fact-value"><p>${cardData.modalContent.facts.height}</p></div>
+                                <div class="fact-label"><p>Высота растения</p></div>
                             </div>
                             <div class="fact-item">
-                                <div class="fact-value">${cardData.modalContent.facts.blooming}</div>
-                                <div class="fact-label">Период цветения</div>
+                                <div class="fact-value"><p>${cardData.modalContent.facts.blooming}</p></div>
+                                <div class="fact-label"><p>Период цветения</p></div>
                             </div>
                         </div>
                     </div>

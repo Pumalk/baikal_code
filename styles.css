@@ -33,10 +33,10 @@
 
 /* БАЗОВЫЕ НАСТРОЙКИ */
 :root {
-	--card-height: 40vw;
-	--card-margin: 4vw;
-	--card-top-offset: 1em;
-	--outline-width: 0;
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --outline-width: 0;
     --color-red: #C92440;
     --color-yellow: #FFC240;
     --color-purple: #7F3F98;
@@ -1549,7 +1549,7 @@ footer p {
         font-size: 1.2rem;
     }
     :root {
-	--card-height: 45vw;
+    --card-height: 45vw;
     }
 }
 
@@ -1574,7 +1574,7 @@ footer p {
         font-size: 1rem;
     }
     :root {
-	--card-height: 50vw;
+    --card-height: 50vw;
     }
 }
 
@@ -1582,6 +1582,7 @@ footer p {
 @media (max-width: 1024px) {
     body{
         background-image: url('media/fon/А4_вертикальные-01.webp');
+        background-attachment: scroll !important;
     }
     h1{
         font-size: 4rem;
@@ -1602,7 +1603,7 @@ footer p {
         font-size: 0.8rem;
     }
     :root {
-	--card-height: 60vw;
+    --card-height: 60vw;
     }
     .hero-button a {
         width: 10rem;
@@ -1663,7 +1664,7 @@ footer p {
         min-height: fit-content;
     }
     :root {
-	--card-height: 60vw;
+    --card-height: 60vw;
     }
     .leaf{
         width: 2rem;                /* 100px */
@@ -1674,6 +1675,10 @@ footer p {
     }
     .card__content{
         padding: 0.5rem;
+    }
+    .card {
+        position: relative !important;
+        top: 0 !important;
     }
     .card_text,
     .card_text p,
@@ -1688,9 +1693,40 @@ footer p {
     .card_text a img {
         width: 1.5rem;
     }
+    .modal-content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .modal-media img{
+        padding-bottom: 0;
+    }
     .back-to-top{
         width: 2rem;
         height: 2rem;
+    }
+    #sectionPin.agroclasses {
+        height: auto !important;
+        overflow: visible !important;
+        display: block !important;
+        position: static !important;
+    }
+    .pin-wrap {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        position: static !important;
+        overflow: visible !important;
+        animation: none !important;
+    }
+    .pin-wrap-sticky{
+        height: auto !important;
+    }
+    .agro-block {
+        width: 100% !important;
+        height: auto !important;
+        padding: 1rem !important;
+        flex-shrink: 0 !important;
+        box-sizing: border-box;
     }
 }
 
@@ -1730,7 +1766,7 @@ footer p {
         height: 0;
     }
     .graph {
-    padding: 1rem 0; /* 40px 0 */
+    padding: 1rem 0;
     }
     .timeline-image {
         width: 8rem;
@@ -1741,6 +1777,10 @@ footer p {
     .card__content figure img {
         max-width: 150%;
         max-height: 150%;
+    }
+    .call img,
+    .social-link img{
+        width: 2rem;
     }
 }
 
