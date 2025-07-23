@@ -93,6 +93,7 @@ const statItemObserver = new window.IntersectionObserver((entries, obs) => {
                 icon.style.transition = 'opacity 0.8s, transform 0.8s';
                 icon.style.opacity = '1';
                 icon.style.transform = 'translateX(0)';
+                icon.style.display = 'block'; // фиксируем видимость
             }
             if (count) {
                 animateNumber(count, parseInt(count.dataset.to || count.textContent, 10));
