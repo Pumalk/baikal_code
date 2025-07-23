@@ -1728,6 +1728,15 @@ footer p {
         flex-shrink: 0 !important;
         box-sizing: border-box;
     }
+    .stat-icon{
+        display: block;
+    }
+    .stat-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 /* --- Мобильные устройства до 480px --- */
