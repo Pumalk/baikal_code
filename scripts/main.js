@@ -67,17 +67,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     animatedEls.forEach(el => observer.observe(el));
 
-    // --- Анимация чисел ---
-    const countEls = document.querySelectorAll('.count-animate');
-    const numberObserver = new window.IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateNumber(entry.target, parseInt(entry.target.dataset.to || entry.target.textContent, 10));
-                obs.unobserve(entry.target);
+    // --- Анимация чисел и иконок статистики(инфографики) одновременно ---
+const statItems = document.querySelectorAll('#graph .stat-item');
+statItems.forEach((item, i) => {
+    const icon = item.querySelector('.stat-icon');
+    const count = item.querySelector('.count-animate');
+    if (icon) {
+        if (i % 2 === 0) {
+            icon.style.transform = 'translateX(8rem)';
+        } else {
+            icon.style.transform = 'translateX(-8rem)';
+        }
+        icon.style.opacity = '0';
+    }
+    if (count) {
+        count.textContent = '0';
+    }
+});
+const statItemObserver = new window.IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        const icon = entry.target.querySelector('.stat-icon');
+        const count = entry.target.querySelector('.count-animate');
+        if (entry.isIntersecting) {
+            if (icon) {
+                icon.style.transition = 'opacity 0.8s, transform 0.8s';
+                icon.style.opacity = '1';
+                icon.style.transform = 'translateX(0)';
             }
-        });
-    }, { threshold: 0.7 });
-    countEls.forEach(el => numberObserver.observe(el));
+            if (count) {
+                animateNumber(count, parseInt(count.dataset.to || count.textContent, 10));
+            }
+            obs.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.7 });
+statItems.forEach(item => statItemObserver.observe(item));
 
     // --- Анимация тегов статистики ---
     const statTags = document.querySelectorAll('.stat-tag');
@@ -118,29 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.3 });
     timelineItems.forEach(item => timelineObserver.observe(item));
-
-    // --- Анимация появления картинок в инфографике ---
-    const statItems = document.querySelectorAll('#graph .stat-item');
-    statItems.forEach((item, i) => {
-        const icon = item.querySelector('.stat-icon');
-        if (!icon) return;
-        if (i % 2 === 0) {
-            icon.style.transform = 'translateX(8rem)';
-        } else {
-            icon.style.transform = 'translateX(-8rem)';
-        }
-        icon.style.opacity = '0';
-    });
-    const statIconObserver = new window.IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.transition = 'opacity 0.8s, transform 0.8s';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateX(0)';
-            }
-        });
-    }, { threshold: 0.3 });
-    document.querySelectorAll('#graph .stat-icon').forEach(icon => statIconObserver.observe(icon));
 
     // --- Анимация появления секции about ---
     const about = document.getElementById('about');
