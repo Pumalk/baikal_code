@@ -1,6 +1,5 @@
 import { getCardData, getAllCardIds } from './cards-data.js';
 
-// Создаем универсальную модалку
 const universalModal = document.createElement('div');
 universalModal.className = 'flower-modal';
 universalModal.style.display = 'none';
@@ -32,7 +31,6 @@ universalModal.innerHTML = `
 document.body.appendChild(universalModal);
 
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Карточки ---
     const cardsContainer = document.getElementById('cards');
     if (cardsContainer) {
         const cardIds = getAllCardIds();
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         initModalHandlers();
     }
 
-    // --- Плавный скролл якорей ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href').substring(1);
@@ -56,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Анимация появления элементов ---
     const animatedEls = document.querySelectorAll('.animate-on-scroll');
     const observer = new window.IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -67,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.2 });
     animatedEls.forEach(el => observer.observe(el));
 
-    // --- Анимация чисел и иконок статистики(инфографики) одновременно ---
 const statItems = document.querySelectorAll('#graph .stat-item');
 statItems.forEach((item, i) => {
     const icon = item.querySelector('.stat-icon');
@@ -103,7 +98,6 @@ const statItemObserver = new window.IntersectionObserver((entries, obs) => {
 }, { threshold: 0.7 });
 statItems.forEach(item => statItemObserver.observe(item));
 
-    // --- Анимация тегов статистики ---
     const statTags = document.querySelectorAll('.stat-tag');
     const tagObserver = new window.IntersectionObserver((entries, obs) => {
         entries.forEach((entry, i) => {
@@ -117,7 +111,6 @@ statItems.forEach(item => statItemObserver.observe(item));
     }, { threshold: 0.7 });
     statTags.forEach(tag => tagObserver.observe(tag));
 
-    // --- Анимация появления картинок в таймлайне ---
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach(item => {
         const imageBlock = item.querySelector('.timeline-image-block');
@@ -143,7 +136,6 @@ statItems.forEach(item => statItemObserver.observe(item));
     }, { threshold: 0.3 });
     timelineItems.forEach(item => timelineObserver.observe(item));
 
-    // --- Анимация появления секции about ---
     const about = document.getElementById('about');
     if (about) {
         const intro = about.querySelector('.about-intro');
@@ -190,7 +182,6 @@ function createCard(cardData, container) {
 }
 
 function initModalHandlers() {
-    // Обработчик открытия модалки
     document.querySelectorAll('.btn--accent').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -200,18 +191,15 @@ function initModalHandlers() {
         });
     });
 
-    // Обработчик закрытия модалки
     universalModal.querySelector('.modal-close').addEventListener('click', closeModal);
     universalModal.querySelector('.modal-overlay').addEventListener('click', closeModal);
 
-    // Обработчик клавиши ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && universalModal.style.display === 'block') {
             closeModal();
         }
     });
 
-    // Обработчики вкладок
     universalModal.querySelectorAll('.media-tab').forEach(tab => {
         tab.addEventListener('click', function() {
             const tabType = this.dataset.tab;
@@ -233,16 +221,13 @@ function initModalHandlers() {
 }
 
 function openModal(cardData) {
-    // Заполнение заголовка
     document.getElementById('modal-title').textContent = cardData.title;
     document.getElementById('modal-buryat').textContent = cardData.buryatName;
     document.getElementById('modal-scientific').textContent = cardData.scientificName;
     
-    // Заполнение фото
     document.getElementById('modal-photo').src = cardData.image;
     document.getElementById('modal-photo').alt = cardData.title;
     
-    // Заполнение контента
     document.getElementById('modal-info').innerHTML = `
         <div class="info-section">
             <h3>Полное описание</h3>
@@ -284,17 +269,14 @@ function openModal(cardData) {
         </div>
     `;
     
-    // Загрузка 3D модели/зарисовки
     const sketchfabContainer = document.getElementById('sketchfab-container');
     sketchfabContainer.innerHTML = cardData.modalContent.sketchfabEmbed;
     
-    // Сброс состояния вкладок
     universalModal.querySelector('.media-tab.active').classList.remove('active');
     universalModal.querySelector('[data-tab="3d"]').classList.add('active');
     sketchfabContainer.style.display = 'block';
     universalModal.querySelector('.photo-tab').style.display = 'none';
     
-    // Показ модалки
     document.body.classList.add('modal-open');
     universalModal.style.display = 'block';
 }
@@ -303,7 +285,6 @@ function closeModal() {
     universalModal.style.display = 'none';
     document.body.classList.remove('modal-open');
     
-    // Очистка тяжелого контента для экономии памяти
     const sketchfabContainer = document.getElementById('sketchfab-container');
     sketchfabContainer.innerHTML = '';
 }

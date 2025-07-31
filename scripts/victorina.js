@@ -1,9 +1,7 @@
-/* ВИКТОРИНА */
 document.addEventListener('DOMContentLoaded', () => {
     const victorinaSection = document.getElementById('victorina');
     if (!victorinaSection) return;
 
-    // Список вопросов и ответов
     const questions = [
         {
             question: "Какое растение содержит байкалин и вогонин — вещества, защищающие мозг и печень?",
@@ -122,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let userAnswers = [];
     let animationFrameId = null;
 
-    // Инициализация викторины
     function initVictorina() {
         victorinaSection.innerHTML = `
             <h2>Проверь свои знания!</h2>
@@ -139,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         showQuestion(currentQuestionIndex);
     }
 
-    // Показать вопрос
     function showQuestion(index) {
         cancelAnimationFrame(animationFrameId);
         
@@ -151,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentQuestionSpan = victorinaSection.querySelector('#current-question');
         const card = victorinaSection.querySelector('.question-card');
 
-        // Анимация исчезновения
         card.classList.remove('fade-in');
         card.classList.add('fade-out');
 
@@ -163,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nextBtn.disabled = true;
             nextBtn.textContent = index === questions.length - 1 ? 'Завершить' : 'Далее';
 
-            // Очистка и создание кнопок вариантов
             optionsContainer.innerHTML = '';
             questionData.options.forEach((option, i) => {
                 const optionBtn = document.createElement('button');
@@ -173,18 +167,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 optionsContainer.appendChild(optionBtn);
             });
 
-            // Обновление кнопки "Далее"
             const newNextBtn = nextBtn.cloneNode(true);
             nextBtn.parentNode.replaceChild(newNextBtn, nextBtn);
             newNextBtn.addEventListener('click', handleNextButtonClick);
 
-            // Анимация появления
             card.classList.remove('fade-out');
             card.classList.add('fade-in');
         }, 200);
     }
 
-    // Обработчик кнопки "Далее"
     function handleNextButtonClick() {
         if (currentQuestionIndex === questions.length - 1) {
             showResults();
@@ -194,18 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Выбор ответа
     function selectAnswer(selectedIndex, questionData) {
         const optionBtns = victorinaSection.querySelectorAll('.option-btn');
         const hintText = victorinaSection.querySelector('.hint-text');
         const nextBtn = victorinaSection.querySelector('.next-btn');
 
-        // Отключаем все кнопки
         optionBtns.forEach(btn => {
             btn.disabled = true;
         });
 
-        // Помечаем правильный и неправильный ответы
         optionBtns.forEach((btn, i) => {
             if (i === questionData.correctIndex) {
                 btn.classList.add('correct');
@@ -214,18 +202,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Обновляем счет
         if (selectedIndex === questionData.correctIndex) {
             score++;
         }
 
-        // Показываем подсказку с анимацией
         hintText.textContent = questionData.hint;
         animationFrameId = requestAnimationFrame(() => {
             hintText.style.opacity = '1';
         });
 
-        // Активируем кнопку "Далее"
         nextBtn.disabled = false;
         userAnswers.push({
             question: questionData.question,
@@ -235,7 +220,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Показать результаты
     function showResults() {
         cancelAnimationFrame(animationFrameId);
         
@@ -249,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // Показываем детальные результаты
         const detailedResults = victorinaSection.querySelector('.detailed-results');
         userAnswers.forEach((answer, i) => {
             const resultItem = document.createElement('div');
@@ -263,7 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
             detailedResults.appendChild(resultItem);
         });
 
-        // Обработчик кнопки перезапуска
         victorinaSection.querySelector('.restart-btn').addEventListener('click', () => {
             currentQuestionIndex = 0;
             score = 0;
@@ -272,7 +254,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Получить сообщение результата
     function getResultMessage(score) {
         const percentage = (score / questions.length) * 100;
         
@@ -283,6 +264,5 @@ document.addEventListener('DOMContentLoaded', () => {
         return "🌿 Самое время пройтись по галерее и узнать больше о чудесах Байкала!";
     }
 
-    // Запуск викторины
     initVictorina();
 });

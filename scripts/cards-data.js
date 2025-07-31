@@ -441,7 +441,6 @@ const cardsData = {
   }
 };
 
-// Функции для работы с данными
 export function getCardData(cardId) {
   return cardsData[cardId];
 }
