@@ -31,8 +31,8 @@
 }
 
 :root {
-    --card-height: 40dvw;
-    --card-margin: 4dvw;
+    --card-height: 40vw;
+    --card-margin: 4vw;
     --card-top-offset: 1em;
     --outline-width: 0;
     --color-red: #C92440;
@@ -205,12 +205,12 @@ letter-spacing: -0.5em;
     position: absolute;
     top: 0.5rem;
     left: 0.625rem;
-    width: 35dvw;
+    width: 35vw;
     z-index: 2;
 }
 
 #about {
-    padding: 5dvw 15dvw;
+    padding: 5vw 15vw;
 }
 
 #about img {
@@ -230,7 +230,7 @@ letter-spacing: -0.5em;
 .about-text2{
     text-align: justify;
     color: rgb(90, 90, 90);
-    margin-bottom: 3dvw;
+    margin-bottom: 3vw;
 }
 
 @keyframes about-fade-in {
@@ -328,7 +328,7 @@ letter-spacing: -0.5em;
 .map-icon--link { background-color: var(--color-purple); color: white; }
 
 .point-label {
-    max-width: 50dvw;
+    max-width: 50vw;
     color: #333;
     text-decoration: none;
     padding: 1rem 1.5rem;
@@ -354,7 +354,7 @@ letter-spacing: -0.5em;
 .map-point:hover .point-label {
     background-color: var(--color-red);
     color: #FFFFFF;
-    transform: translateX(1dvw);
+    transform: translateX(1vw);
     border-color: rgba(255, 255, 255, 0.3);
     transition: 0.2s linear;
 }
@@ -364,11 +364,11 @@ letter-spacing: -0.5em;
 }
 
 .map-point:nth-child(odd) .point-label {
-    transform: translateX(-10dvw);
+    transform: translateX(-10vw);
 }
 
 .map-point:nth-child(odd):hover .point-label {
-    transform: translateX(-1dvw);
+    transform: translateX(-1vw);
 }
 
 
@@ -385,7 +385,7 @@ letter-spacing: -0.5em;
 
 .history-timeline {
     position: relative;
-    max-width: 80dvw;
+    max-width: 80vw;
     margin: 0 auto;
     padding: 5rem 0 0;
 }
@@ -635,14 +635,14 @@ letter-spacing: -0.5em;
 }
 
 .graph img {
-    max-width: 30dvw;
+    max-width: 30vw;
     object-fit: contain;
     border-radius: 0.9375rem; 
     display: block;
 }
 
 .stat-number {
-    font-size: 10dvw;
+    font-size: 10vw;
     margin-bottom: 0;
 }
 
@@ -774,7 +774,7 @@ letter-spacing: -0.5em;
     transition: transform 0.3s ease;
     height: auto;
     max-height:var(--card-height);
-    width: 90dvw;
+    width: 90vw;
     padding: 1.875rem; 
     background-image: url(media/fon/А4_рамки_оранжевые_горизонтальные-07.webp);
     background-color: var(--color-biruze);
@@ -867,7 +867,7 @@ html.modal-open, body.modal-open {
     background: #fff;
     border-radius: 1rem; 
     box-shadow: 0 0.625rem 3.125rem rgba(0, 0, 0, 0.3); 
-    width: 90dvw !important;
+    width: 90vw !important;
     max-width: 75rem; 
     margin: 5vh auto;
     max-height: 90vh;
@@ -1120,7 +1120,7 @@ html.modal-open, body.modal-open {
 }
 
 .agro-block {
-    width: 70dvw;
+    width: 70vw;
     height: 100vh;
     flex-shrink: 0;
     display: flex;
@@ -1157,7 +1157,7 @@ html.modal-open, body.modal-open {
 
 @keyframes move {
     to {
-        transform: translateX(calc(-100% + 100dvw));
+        transform: translateX(calc(-100% + 100vw));
     }
 }
 
@@ -1171,7 +1171,7 @@ html.modal-open, body.modal-open {
 }
 
 .victorina-container, .results-card {
-    max-width: 70dvw; 
+    max-width: 70vw; 
     max-height: auto;
     margin: 2rem auto;
     background: rgba(255, 255, 255, 0.9);
@@ -1384,7 +1384,7 @@ footer p {
 }
 
 .footer-logo {
-    width: 30dvw; 
+    width: 30vw; 
     grid-area: 1 / 1 / 2 / 2;
     text-align: center;
 }
@@ -1515,7 +1515,7 @@ footer p {
         font-size: 1.2rem;
     }
     :root {
-    --card-height: 45dvw;
+    --card-height: 45vw;
     }
 }
 
@@ -1539,12 +1539,12 @@ footer p {
         font-size: 1rem;
     }
     :root {
-    --card-height: 60dvw;
-    --card-margin: 15dvw;
+    --card-height: 60vw;
+    --card-margin: 15vw;
     }
     #cards{
         margin-bottom: 0;
-        padding-bottom: 10dvw;
+        padding-bottom: 10vw;
     }
 }
 
@@ -1572,14 +1572,14 @@ footer p {
         font-size: 0.8rem;
     }
     :root {
-    --card-height: 60dvw;
+    --card-height: 60vw;
     }
     .hero-button a {
         width: 10rem;
     }
     .back-to-top{
-    bottom: 3dvw;
-    right: 3dvw;
+    bottom: 3vw;
+    right: 3vw;
     }
     .point-label {
         transform: none;
@@ -1610,7 +1610,7 @@ footer p {
 
 @media (max-width: 768px) {
     h1{
-        margin-top: 20dvw;
+        margin-top: 20vw;
         font-size: 2rem;
     }
     h2{
@@ -1632,14 +1632,14 @@ footer p {
         min-height: fit-content;
     }
     :root {
-    --card-height: 60dvw;
+    --card-height: 60vw;
     }
     .leaf{
         width: 2rem;
         height: 2rem;
     }
     .logo-hero{
-        width: 70dvw;
+        width: 70vw;
     }
     .card__content{
         padding: 0.5rem;
@@ -1717,15 +1717,15 @@ footer p {
     gap: 0;
     flex-direction: column;
     align-items: center;
-    width: 90dvw;
+    width: 90vw;
     padding: 1rem;
 }
     .card{
-        padding-top: 10dvw;
+        padding-top: 10vw;
     }
 
     :root{
-        --card-margin:2dvw;
+        --card-margin:2vw;
         --card-height: fit-content;
     }
 
@@ -1785,8 +1785,8 @@ footer p {
     footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 1dvw;
-        grid-row-gap: 1dvw;
+        grid-column-gap: 1vw;
+        grid-row-gap: 1vw;
     }
 
     .footer-logo { grid-area: 1 / 1 / 2 / 2; }
@@ -1801,7 +1801,7 @@ footer p {
         background-image: url('media/fon/а4_вертик_тел-01.webp');
     }
     h1{
-        margin-top: 20dvw;
+        margin-top: 20vw;
         font-size: 1.8rem;
     }
     h2{
